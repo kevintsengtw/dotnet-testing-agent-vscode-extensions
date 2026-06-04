@@ -98,6 +98,23 @@
 
 ---
 
+## 更新方式
+
+本 Extension 以 `.vsix` 形式發佈於 GitHub Releases，**不走 VS Code Marketplace，因此 VS Code 不會自動更新**，需手動更新。
+
+啟動約 10 秒後會自動檢查是否有新版本，若有會跳出通知，點「前往下載」即開啟 Releases 頁面（可用設定 `dta.checkUpdatesOnStartup` 關閉）。
+
+手動更新（例如 v0.2.0 → v0.3.0）：
+
+1. 前往 [Releases](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases) 下載新版 `dotnet-testing-agent-<版本>.vsix`
+2. 以與安裝相同的方式安裝即可，**不需要先解除安裝舊版**，VS Code 會就地覆蓋：
+   - **面板**：Extensions（Windows：`Ctrl+Shift+X`；macOS：`Cmd+Shift+X`）→ `...` → **Install from VSIX...** → 選擇新檔
+   - **命令列**：`code --install-extension dotnet-testing-agent-<版本>.vsix`
+3. 依提示 **Reload Window**（重新載入視窗）讓新版生效。
+4. 若新版更新了內建 Skills / Agents 或部署邏輯，建議重新執行一次初始化指令以同步最新內容（重跑安全，會以 QuickPick 確認是否覆蓋）。
+
+---
+
 ## 快速開始
 
 安裝後，Activity Bar 會出現「dotnet-testing-agent 工具包」圖示，側邊欄含 **Claude 模式** 與 **Copilot 模式** 兩個面板。依需求初始化對應模式。
