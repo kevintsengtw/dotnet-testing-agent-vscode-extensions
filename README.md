@@ -115,14 +115,17 @@
 
 啟動約 10 秒後會自動檢查是否有新版本，若有會跳出通知，點「前往下載」即開啟 Releases 頁面（可用設定 `dta.checkUpdatesOnStartup` 關閉）。
 
-手動更新（例如 v0.2.0 → v0.3.0）：
+手動更新（例如 v0.4.0 → v0.5.0）：
 
 1. 前往 [Releases](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases) 下載新版 `dotnet-testing-agent-<版本>.vsix`
-2. 以與安裝相同的方式安裝即可，**不需要先解除安裝舊版**，VS Code 會就地覆蓋：
-   - **面板**：Extensions（Windows：`Ctrl+Shift+X`；macOS：`Cmd+Shift+X`）→ `...` → **Install from VSIX...** → 選擇新檔
+2. 以與安裝相同的方式就地安裝（**一般更新不需先解除安裝**）：
+   - **面板**：Extensions（Windows：`Ctrl+Shift+X`；macOS：`Cmd+Shift+X`）→ `...` → **Install from VSIX...** → 選新檔
    - **命令列**：`code --install-extension dotnet-testing-agent-<版本>.vsix`
-3. 依提示 **Reload Window**（重新載入視窗）讓新版生效。
+3. **完整結束並重新開啟 VS Code**（`File → Exit` / macOS `Cmd+Q`，**不是只 Reload Window**）讓新版生效。
 4. 若新版更新了內建 Skills / Agents 或部署邏輯，建議重新執行一次初始化指令以同步最新內容（重跑安全，會以 QuickPick 確認是否覆蓋）。
+
+> ⚠️ **重要：安裝新版後請「完整結束 VS Code 再重新開啟」（`Cmd+Q` / `File → Exit`），不能只用 Reload Window。**
+> 尤其是「新增了 Sidebar 面板」的版本（例如 v0.4.0 → v0.5.0 新增「Codex 模式」面板）：VSIX 就地覆蓋後，Reload Window 不會重新掃描面板貢獻點，新面板不會出現；**完整關閉再開即可正常顯示，不需解除安裝**。
 
 ---
 
