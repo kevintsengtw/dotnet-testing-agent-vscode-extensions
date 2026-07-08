@@ -1,6 +1,6 @@
 # dotnet Testing Agent — VS Code Extension
 
-> 一鍵設定 AI 輔助 .NET 測試開發環境。支援 **Claude Code** 與 **GitHub Copilot** 兩種模式。
+> 一鍵設定 AI 輔助 .NET 測試開發環境。支援 **Claude Code**、**Codex** 與 **GitHub Copilot** 三種模式。
 
 [![Release](https://img.shields.io/github/v/release/kevintsengtw/dotnet-testing-agent-vscode-extensions?label=最新版本)](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases)
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.85.0+-blueviolet)
@@ -18,29 +18,30 @@
 
 在沒有這個 Extension 之前，要讓 AI Coding Agent 具備 .NET 測試的領域知識，得手動下載 Skills 定義檔、部署 Orchestration、（Copilot 模式還要）安裝 `mcp-local-rag` 並建立 RAG 索引。dotnet Testing Agent 把這些全部自動化——**安裝後執行一個指令即可開始**撰寫 AI 輔助的 .NET 測試。
 
-支援兩種 AI 工具，以 **Claude** 為主、**GitHub Copilot** 並行：
+支援三種 AI 工具，以 **Claude** 為主、**Codex** 與 **GitHub Copilot** 並行：
 
 - **Claude 模式**：搭配 VS Code 的 Claude 擴充套件（亦支援 Claude Code CLI），部署至 `.claude/`，**免 RAG**
+- **Codex 模式**：搭配 Codex（VS Code 擴充 / CLI），部署至 `.codex/`，**免 RAG**
 - **Copilot 模式**：搭配 GitHub Copilot Chat（Agent 模式），部署至 `.github/`，含 RAG 精準搜尋
 
 測試框架約束：**AwesomeAssertions**（非 FluentAssertions）、**NSubstitute**（非 Moq）。
 
-自 **v0.2.0** 起，兩種模式整合為**單一 extension**，安裝一份 `.vsix` 即可同時使用，於 Activity Bar 的「dotnet-testing-agent 工具包」面板中切換。
+自 **v0.2.0** 起兩種模式整合為**單一 extension**，並自 Codex 模式起擴充為三種；安裝一份 `.vsix` 即可同時使用，於 Activity Bar 的「dotnet-testing-agent 工具包」面板中切換。
 
 ---
 
-## 兩種模式
+## 三種模式
 
-| | Claude 模式 | Copilot 模式 |
-| --- | --- | --- |
-| 搭配的 AI 工具 | Claude Code（VS Code 擴充套件 / CLI） | GitHub Copilot Chat（Agent 模式） |
-| 部署路徑 | `.claude/`（skills、agents、hooks） | `.github/`（skills、agents） |
-| RAG 索引 | ❌ 不需要 | ✅ 需要（mcp-local-rag + LanceDB） |
-| 初始化指令 | `初始化 Claude 模式` | `初始化 .NET Testing Agent` |
-| 安裝步驟 | 4 步驟 | 6 步驟 |
-| Orchestration 來源 | [dotnet-testing-agent-orchestration-claude](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration-claude) | [dotnet-testing-agent-orchestration](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration) |
+| | Claude 模式 | Codex 模式 | Copilot 模式 |
+| --- | --- | --- | --- |
+| 搭配的 AI 工具 | Claude Code（VS Code 擴充套件 / CLI） | Codex（VS Code 擴充 / CLI） | GitHub Copilot Chat（Agent 模式） |
+| 部署路徑 | `.claude/`（skills、agents、hooks） | `.codex/`（skills、agents、config.toml） | `.github/`（skills、agents） |
+| RAG 索引 | ❌ 不需要 | ❌ 不需要 | ✅ 需要（mcp-local-rag + LanceDB） |
+| 初始化指令 | `初始化 Claude 模式` | `初始化 Codex Agent 環境` | `初始化 .NET Testing Agent` |
+| 安裝步驟 | 4 步驟 | 4 步驟 | 6 步驟 |
+| Orchestration 來源 | [dotnet-testing-agent-orchestration-claude](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration-claude) | [dotnet-testing-agent-orchestration-codex](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration-codex) | [dotnet-testing-agent-orchestration](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration) |
 
-兩種模式部署路徑與 manifest 完全獨立，互不干擾，可只用其中一種或兩種並用。兩者皆使用共用的 [dotnet-testing-agent-skills](https://github.com/kevintsengtw/dotnet-testing-agent-skills)；差異在於 Orchestration 定義（Agents / Hooks 等）各自來自上表對應的 repo。
+三種模式部署路徑與 manifest 完全獨立，互不干擾，可只用其中一種或多種並用。皆使用共用的 [dotnet-testing-agent-skills](https://github.com/kevintsengtw/dotnet-testing-agent-skills)；差異在於 Orchestration 定義（Agents / Hooks / config 等）各自來自上表對應的 repo。
 
 ---
 
@@ -53,6 +54,15 @@
 - **搭配 Claude 擴充套件**：優先支援 VS Code 的 Claude 擴充套件，亦支援 Claude Code CLI
 - **無需 RAG**：不需要安裝 `mcp-local-rag`，也不需要建立本地索引庫
 - **環境診斷**：5 項環境檢查（Node.js、Skills/Agents/Hooks 目錄、Claude Code CLI），失敗項目可自動重新部署修復
+
+### Codex 模式
+
+- **單一面板整合**：在「dotnet-testing-agent 工具包」中提供獨立的「Codex 模式」面板，與 Claude / Copilot 模式並存、互不干擾
+- **一鍵部署**：自動部署 Skills（`.codex/skills/`）、16 個 Agents（`.codex/agents/`，`.toml`）、平台設定（`.codex/config.toml`）與 token 估算引擎（`.codex/scripts/`）
+- **搭配 Codex**：部署 [orchestration-codex](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration-codex) 的 1+4 測試 orchestration，供 Codex 原生 SpawnAgent 呼叫（unit / TUnit / integration / aspire 四種工作流程）
+- **設定不覆寫**：`.codex/config.toml` 採「補差異」合併，保留使用者既有設定、只補上缺少項目
+- **無需 RAG**：不需要安裝 `mcp-local-rag`，也不需要建立本地索引庫
+- **環境診斷**：6 項環境檢查（Node.js、Skills/Agents/Config/Scripts、`codex --version`），失敗項目可自動重新部署修復
 
 ### Copilot 模式
 
@@ -79,6 +89,7 @@
 | 模式 | 額外需求 |
 | --- | --- |
 | Claude 模式 | Claude Code（優先支援 VS Code 的 Claude 擴充套件，亦支援 Claude Code CLI） |
+| Codex 模式 | Codex（VS Code 擴充或 CLI）；integration / aspire 工作流程另需 **Docker** |
 | Copilot 模式 | GitHub Copilot Chat（最新版、已登入） |
 
 ---
@@ -117,7 +128,7 @@
 
 ## 快速開始
 
-安裝後，Activity Bar 會出現「dotnet-testing-agent 工具包」圖示，側邊欄含 **Claude 模式** 與 **Copilot 模式** 兩個面板。依需求初始化對應模式。
+安裝後，Activity Bar 會出現「dotnet-testing-agent 工具包」圖示，側邊欄含 **Claude 模式**、**Codex 模式** 與 **Copilot 模式** 三個面板。依需求初始化對應模式。
 
 > 快捷鍵對照：命令面板 — Windows `Ctrl+Shift+P`、macOS `Cmd+Shift+P`；Copilot Chat — Windows `Ctrl+Alt+I`、macOS `Cmd+Ctrl+I`。
 
@@ -136,6 +147,27 @@
 ![Claude 模式 Agents 分頁，列出 16 個 agents 與 hooks](images/claude-agents.png)
 
 </details>
+
+### Codex 模式
+
+1. 開啟命令面板（Windows：`Ctrl+Shift+P`；macOS：`Cmd+Shift+P`）→ 執行 `dotnet-testing 測試工作流程: 初始化 Codex Agent 環境`
+2. 等待 4 個步驟完成（部署 Skills / Agents / Config / Scripts 至 `.codex/`）
+3. 在 Codex（VS Code 擴充或 CLI）中以 `$dotnet-testing-orchestrator-unit`（或 `-tunit` / `-integration` / `-aspire`）喚起對應工作流程
+
+完成後可在側邊欄查看部署狀態與環境診斷：
+
+![Codex 模式總覽，環境診斷 6/6 全部通過](images/codex-overview.png)
+
+<details>
+<summary>Codex 模式的 Skills 與 Agents 部署詳情</summary>
+
+![Codex 模式 Skills 分頁，顯示 .codex/skills 部署詳情](images/codex-skills.png)
+
+![Codex 模式 Agents 分頁，列出 16 個 .toml agents、config.toml 與 token 估算引擎](images/codex-agents.png)
+
+</details>
+
+> integration / aspire 工作流程需要 **Docker**（容器化資料庫 / AppHost 宣告式容器）。
 
 ### Copilot 模式
 
@@ -173,6 +205,13 @@
 | 初始化 Claude 模式 | 部署 Skills、16 個 Agents、Hooks，寫入 `manifest-claude.json` |
 | Claude 模式環境診斷 | 執行 5 項環境檢查（Node.js、Skills/Agents/Hooks 目錄、Claude Code CLI） |
 
+### Codex 模式
+
+| 指令 | 說明 |
+| --- | --- |
+| 初始化 Codex Agent 環境 | 部署 Skills、16 個 Agents（`.toml`）、`config.toml`、token 估算引擎，寫入 `manifest-codex.json` |
+| Codex 環境診斷 | 執行 6 項環境檢查（Node.js、Skills/Agents/Config/Scripts、`codex --version`） |
+
 ### Copilot 模式
 
 | 指令 | 說明 |
@@ -187,13 +226,19 @@
 
 ## Sidebar 面板
 
-點選 Activity Bar 的「dotnet-testing-agent 工具包」圖示，側邊欄含兩個可折疊面板：
+點選 Activity Bar 的「dotnet-testing-agent 工具包」圖示，側邊欄含三個可折疊面板：
 
 ### Claude 模式面板（3 分頁）
 
 - **總覽**：顯示初始化狀態與安裝時間；提供初始化與環境診斷快速操作
 - **Skills**：`.claude/skills/` 部署詳情
 - **Agents**：`.claude/agents/` 部署詳情（目標 16 個）
+
+### Codex 模式面板（3 分頁）
+
+- **總覽**：顯示初始化狀態與安裝時間；提供初始化與環境診斷快速操作
+- **Skills**：`.codex/skills/` 部署詳情
+- **Agents**：`.codex/agents/` 部署詳情（16 個 `.toml`）、Config（`.codex/config.toml`）與 token 估算引擎狀態
 
 ### Copilot 模式面板（5 分頁）
 
@@ -219,6 +264,19 @@
     └── manifest-claude.json     ← Claude 模式安裝記錄（不提交 git）
 ```
 
+### Codex 模式
+
+```plaintext
+<workspace>/
+├── .codex/
+│   ├── skills/       ← Skills 定義（共用 + orchestrator 專用）
+│   ├── agents/       ← 16 個 Codex Agent 定義（.toml）
+│   ├── scripts/      ← run-state.mjs（run-state 寫入器）+ estimate-token-usage.mjs（token 估算）
+│   └── config.toml   ← 平台設定（補差異合併，保留使用者既有設定）
+└── .dotnet-testing-agent/
+    └── manifest-codex.json      ← Codex 模式安裝記錄（不提交 git）
+```
+
 ### Copilot 模式
 
 ```plaintext
@@ -233,7 +291,7 @@
     └── manifest.json            ← 安裝記錄（不提交 git）
 ```
 
-> `.mcp/`、`.claude/` 相關產物與 `.dotnet-testing-agent/` 會在初始化後自動加入 `.gitignore`。
+> `.mcp/`、`.claude/`、`.codex/` 相關產物與 `.dotnet-testing-agent/` 會在初始化後自動加入 `.gitignore`。
 
 ---
 
@@ -305,7 +363,7 @@
 
 ## 內建 Orchestration Agents
 
-供 AI Coding Agent 呼叫的測試工作流程定義，共 4 套、每套 5 個角色（orchestrator / analyzer / writer / reviewer / executor）。Copilot 模式部署至 `.github/agents/`，Claude 模式部署至 `.claude/agents/`。
+供 AI Coding Agent 呼叫的測試工作流程定義，共 4 套、每套 5 個角色（orchestrator / analyzer / writer / reviewer / executor）。Copilot 模式部署至 `.github/agents/`，Claude 模式部署至 `.claude/agents/`（`.md`），Codex 模式部署至 `.codex/agents/`（`.toml`，16 個 subagent + 4 個 orchestrator skill）。
 
 <details>
 <summary>基礎測試套件</summary>
@@ -369,6 +427,7 @@
 | `dta.orchVersion` | string | `"latest"` | Orchestration 版本 tag（例如 `v1.0.0`）；`"latest"` 自動抓取最新 |
 | `dta.mcpInstallMode` | string | `"online"` | Embedding model 安裝模式：`online`（HuggingFace 自動下載）或 `offline`（使用本地預先打包的 zip） |
 | `dta.claude.skillsVersion` | string | `"latest"` | Claude 模式 Skills 版本 tag；`"latest"` 自動抓取最新 release |
+| `dta.codex.skillsVersion` | string | `"latest"` | Codex 模式 Skills 版本 tag；`"latest"` 自動抓取最新 release |
 
 ---
 
@@ -376,8 +435,9 @@
 
 | Repo | 說明 |
 | --- | --- |
-| [dotnet-testing-agent-skills](https://github.com/kevintsengtw/dotnet-testing-agent-skills) | .NET 測試 Agent Skill 定義檔（兩種模式共用） |
+| [dotnet-testing-agent-skills](https://github.com/kevintsengtw/dotnet-testing-agent-skills) | .NET 測試 Agent Skill 定義檔（三種模式共用） |
 | [dotnet-testing-agent-orchestration-claude](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration-claude) | **Claude 模式**的 Orchestration 定義（skills / agents / hooks） |
+| [dotnet-testing-agent-orchestration-codex](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration-codex) | **Codex 模式**的 Orchestration 定義（skills / agents `.toml` / config.toml） |
 | [dotnet-testing-agent-orchestration](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration) | **Copilot 模式**的 Agent Orchestration 流程定義 |
 
 ---
