@@ -58,7 +58,7 @@
 ### Codex 模式
 
 - **單一面板整合**：在「dotnet-testing-agent 工具包」中提供獨立的「Codex 模式」面板，與 Claude / Copilot 模式並存、互不干擾
-- **一鍵部署**：自動部署 Skills（`.codex/skills/`）、16 個 Agents（`.codex/agents/`，`.toml`）、平台設定（`.codex/config.toml`）與 token 估算引擎（`.codex/scripts/`）
+- **一鍵部署**：自動部署 35 個 Skills、16 個 Agents（`.toml`）、12 個執行／驗證 scripts 與平台設定
 - **搭配 Codex**：部署 [orchestration-codex](https://github.com/kevintsengtw/dotnet-testing-agent-orchestration-codex) 的 1+4 測試 orchestration，供 Codex 原生 SpawnAgent 呼叫（unit / TUnit / integration / aspire 四種工作流程）
 - **設定不覆寫**：`.codex/config.toml` 採「補差異」合併，保留使用者既有設定、只補上缺少項目
 - **無需 RAG**：不需要安裝 `mcp-local-rag`，也不需要建立本地索引庫
@@ -68,11 +68,19 @@
 
 - **一鍵初始化**：自動執行 6 個步驟，完成從 Skills 部署到 MCP Server 啟動的全部工作；可選擇線上（HuggingFace）或離線（本地 zip）安裝 embedding model
 - **內建 Skills & Agents**：隨 Extension 打包 30 個 .NET 測試 Skills 與 20 個 Orchestration Agent 定義，不需網路下載
-- **Online 優先部署**：init 時優先從 GitHub Release 抓取最新版本；網路不可用時自動退回內建版本
+- **離線可初始化**：init 先部署 VSIX 內建的正式版本，再於有網路時檢查 GitHub 最新正式 Release
 - **RAG 精準搜尋**：透過 `mcp-local-rag` 建立本地索引庫，讓 Copilot Chat 能精準引用 Skills 內容
 - **RAG 索引驗證**：4 步驟自動驗證索引完整性（DB 存在性、文件數量、索引範圍、Smoke test）
 - **環境診斷**：7 項環境檢查，發現問題自動提供修復選項
-- **版本更新通知**：init 完成後自動偵測 Skills / Orchestration 是否有新版本
+- **版本更新通知**：啟動、開啟模式面板或 init 完成後偵測 Skills / Orchestration 新版
+
+### 工作流程版本檢查
+
+三種模式會比較 workspace manifest 與 GitHub 上的最新正式 Skills / Orchestration Release。發現新版時可選擇「立即更新」、「查看 Release」或「略過此版本」。更新會使用檢查時已固定的版本組合，完成後同步更新 manifest 與面板資訊。
+
+啟動及切換面板屬於背景檢查；在離線、逾時或 GitHub 暫時不可用時不會跳出錯誤或警告。只有使用者主動初始化或確認更新時，才會顯示無法連線提示。更新過程若失敗，Extension 會還原原有內容。
+
+Claude／Codex 更新會記錄 Extension 實際部署的受管理檔案；後續 Release 移除檔案時會同步清理，不會長期累積舊 Skills／Agents／Scripts，也不會刪除清單外的使用者自訂內容。
 
 ---
 
@@ -262,7 +270,8 @@
 ├── .claude/
 │   ├── skills/      ← Skills 定義（共用 + orchestrator 專用）
 │   ├── agents/      ← 16 個 Claude Agent 定義
-│   └── hooks/       ← shell scripts + install-hooks.js（寫入 .claude/settings.json）
+│   ├── hooks/       ← shell scripts + install-hooks.js（合併至 settings.json）
+│   └── scripts/     ← token-usage 引擎
 └── .dotnet-testing-agent/
     └── manifest-claude.json     ← Claude 模式安裝記錄（不提交 git）
 ```
@@ -272,9 +281,9 @@
 ```plaintext
 <workspace>/
 ├── .codex/
-│   ├── skills/       ← Skills 定義（共用 + orchestrator 專用）
+│   ├── skills/       ← 35 個 Skills（共用 + Codex 模式內容）
 │   ├── agents/       ← 16 個 Codex Agent 定義（.toml）
-│   ├── scripts/      ← run-state.mjs（run-state 寫入器）+ estimate-token-usage.mjs（token 估算）
+│   ├── scripts/      ← run-state、token 估算與 10 個 validators
 │   └── config.toml   ← 平台設定（補差異合併，保留使用者既有設定）
 └── .dotnet-testing-agent/
     └── manifest-codex.json      ← Codex 模式安裝記錄（不提交 git）
@@ -429,8 +438,6 @@
 | `dta.skillsVersion` | string | `"latest"` | Skills 版本 tag（例如 `v2.4.1`）；`"latest"` 自動抓取最新 release |
 | `dta.orchVersion` | string | `"latest"` | Orchestration 版本 tag（例如 `v1.0.0`）；`"latest"` 自動抓取最新 |
 | `dta.mcpInstallMode` | string | `"online"` | Embedding model 安裝模式：`online`（HuggingFace 自動下載）或 `offline`（使用本地預先打包的 zip） |
-| `dta.claude.skillsVersion` | string | `"latest"` | Claude 模式 Skills 版本 tag；`"latest"` 自動抓取最新 release |
-| `dta.codex.skillsVersion` | string | `"latest"` | Codex 模式 Skills 版本 tag；`"latest"` 自動抓取最新 release |
 
 ---
 
