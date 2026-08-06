@@ -1,4 +1,4 @@
-# dotnet Testing Agent v0.7.0-beta.3
+# dotnet Testing Agent v0.7.0-beta.4
 
 一鍵初始化 Claude Code 與 Codex 的 .NET 測試工作流程。
 
@@ -15,7 +15,7 @@
 
 ## 使用方式
 
-1. 安裝 `dotnet-testing-agent-0.7.0-beta.3.vsix`。
+1. 安裝 `dotnet-testing-agent-0.7.0-beta.4.vsix`。
 2. 開啟目標 workspace。
 3. 從工具包側邊欄初始化 Claude 或 Codex。
 4. 執行環境診斷。
