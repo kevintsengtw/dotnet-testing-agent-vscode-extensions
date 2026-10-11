@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.8.2] - 2026-10-11
+
+- Codex Full 的 Agents 區塊順序調整為 Unit、Integration、Aspire、TUnit，讓常用的單元測試 Agents 優先顯示。
+- Codex Full／Lite 套用或重設 Agent 模型與推理強度，或清單收到背景狀態更新時，保留目前捲動位置與已展開的 Agent 技術資訊，減少連續調整時重新尋找位置的操作。
+
+- 修正具有舊版移轉紀錄的工作區，在解除安裝 Claude Full 或 Codex Full 後，中央部署 manifest 被誤判為無效，導致 Lite 管理或 Full／Lite 重新安裝受阻的問題。歷史移轉紀錄不要求對應模式仍已安裝；目前檔案歸屬、固定來源及完整性檢查仍維持。
+- 已受此問題影響的 manifest 可由修正版直接讀取，不需要手動刪除或修改；保留其他模式使用的檔案及使用者自訂內容。
+- 四模式內建離線版本沿用 v0.8.1：Claude Full v1.7.3、Claude Lite v1.2.0、Codex Full v1.3.1、Codex Lite v1.2.2，Shared Skills v2.4.5。
+
 ## [0.8.1] - 2026-10-10
 
 - 修正模式環境診斷遺漏共用檢查結果的問題：Node.js 或 CLI 缺失會顯示於 Full／Lite 畫面及複製的完整報告，不再誤顯示環境正常。

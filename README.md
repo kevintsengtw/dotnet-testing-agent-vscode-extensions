@@ -12,9 +12,13 @@
 - **Codex Agent 設定**：可針對單一 Agent 調整模型與推理強度；Full 與 Lite 的設定各自保留。
 - **工作區檔案保護**：保留使用者自訂檔案與既有設定，部署失敗時復原原有內容。
 
-## 最新版本：v0.8.1
+## 最新版本：v0.8.2
 
-下載 [v0.8.1 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.1) 中的 `dotnet-testing-agent-0.8.1.vsix`。完整步驟請見 [v0.8.1 安裝與升級指南](docs/v0.8.1.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
+Codex Full 的 Agents 區塊依序為 Unit、Integration、Aspire、TUnit；Full／Lite 套用或重設後保留目前捲動位置與已展開的 Agent 技術資訊，方便連續調整模型與推理強度。
+
+本版修正舊版移轉工作區解除安裝 Full 模式後，中央部署 manifest 被誤判為無效、無法重新安裝的問題。歷史移轉紀錄不再被當成目前已安裝模式；其他模式的檔案與使用者自訂內容仍受保護。已受影響的 manifest 可直接讀取，不需要手動刪除或修改。
+
+下載 [v0.8.2 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.2) 中的 `dotnet-testing-agent-0.8.2.vsix`。完整步驟請見 [v0.8.2 安裝與升級指南](docs/v0.8.2.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
 
 本版預設離線安裝內容：
 
@@ -29,7 +33,7 @@
 
 「版本資訊」列出四模式內建版本，工作區已安裝版本另行顯示。
 
-## v0.8.1 更新重點
+## 延續 v0.8.1 的功能
 
 - **直接升級**：四模式依已安裝、內建及可取得的線上版本提供「升級安裝」，不必先解除安裝。GitHub 查詢受限或連線失敗時，仍可升級至較新的完整內建版本；保留使用者檔案與 Agent 設定，拒絕降版。
 - **統一管理入口**：每個模式保留一個管理入口，依版本提供升級安裝、修復或解除安裝。已是內建最新版但無法查詢線上版本時，會明確顯示線上最新版本尚未確認。
@@ -57,7 +61,7 @@ Shared Skills v2.4.5 承接前版修正，更新 Web API／Aspire 測試範本�
 
 ## Full／Lite 模式
 
-以下截圖沿用 v0.8.0，供辨識查看模式與安裝狀態；v0.8.1 的版本資訊及操作按鈕以本文說明為準。
+以下截圖沿用 v0.8.0，供辨識查看模式與安裝狀態；v0.8.2 的版本資訊及操作按鈕以本文說明為準。
 
 ![Codex Full 與 Lite 可同時安裝，目前查看模式與安裝狀態分開顯示](images/v0.8.0-codex-modes-overview.png)
 
@@ -71,7 +75,9 @@ Codex Full／Lite 的每個受管理 Agent 都可獨立選擇模型，選單依�
 
 ![Codex Lite 的 Agent 資產狀態與模型設定集中在同一卡片](images/v0.8.0-codex-lite-agent-settings.png)
 
-此截圖為 v0.8.0；v0.8.1 的模型順序與「套用」「重設」操作依下列說明，已不使用舊版的預覽確認流程。
+此截圖為 v0.8.0；v0.8.2 的模型順序與「套用」「重設」操作依下列說明，已不使用舊版的預覽確認流程。
+
+Codex Full 的 16 個 Agents 依 Unit、Integration、Aspire、TUnit 排列；Codex Lite 顯示兩個 Unit Agents。套用、重設及背景更新後，保留目前捲動位置與已展開的 Agent 技術資訊。
 
 每張 Agent 卡片會顯示資產狀態、來源預設、目前 model／effort、兩個下拉選單及單一 Agent 的套用／重設。受管理路徑和 exact source 收合在「Agent 技術資訊」中。
 
@@ -85,7 +91,7 @@ Codex Full／Lite 的每個受管理 Agent 都可獨立選擇模型，選單依�
 
 ## 使用方式
 
-1. 安裝 `dotnet-testing-agent-0.8.1.vsix`，完整重啟 VS Code。
+1. 安裝提供的 `dotnet-testing-agent-0.8.2.vsix`，完整重啟 VS Code。
 2. 開啟目標 workspace，從工具包側邊欄展開 Claude 或 Codex。
 3. 選擇 Full 或 Lite 並安裝需要的模式；四個模式可同時存在。
 4. 執行環境診斷。
