@@ -12,15 +12,31 @@
 - **Codex Agent 設定**：可針對單一 Agent 調整模型與推理強度；Full 與 Lite 的設定各自保留。
 - **工作區檔案保護**：保留使用者自訂檔案與既有設定，部署失敗時復原原有內容。
 
-## 最新版本：v0.8.2
+## 最新版本：v0.8.3
+
+下載 [v0.8.3 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.3) 中的 `dotnet-testing-agent-0.8.3.vsix`。完整步驟請見 [v0.8.3 安裝與升級指南](docs/v0.8.3.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
+
+### v0.8.3：Code Coverage 與預設提示詞
+
+新增獨立、預設收合的「Code Coverage」區塊，不需先初始化工作流程模式。掃描 `.sln`／`.slnx` 的實際測試專案成員，依 VSTest 或 MTP 原生／舊版相容模式產生 Coverage 與 HTML Report 指令，提供分別複製與成功回饋。
+
+請在 PowerShell 的所選工作區根目錄先執行 Coverage，再執行同組 HTML Report。VSTest 需要 `coverlet.collector`，MTP 預設需要 `Microsoft.Testing.Extensions.CodeCoverage`；HTML 報告需要已安裝的 ReportGenerator 全域工具。指令使用同組結果目錄，重新掃描或變更選擇後須重新執行 Coverage。Extension 只讀取設定與複製文字，不執行測試或修改專案。
+
+同一工作區可包含使用不同 runner 的方案。面板讀取方案目錄往上至工作區根目錄最近的 `global.json`；必要時 Coverage 指令暫時切換到該設定目錄，執行後恢復原目錄。HTML 指令及結果目錄仍以所選工作區根目錄為準。
+
+Coverage 掃描會採用適用的 `VersionOverride`，中央 MTP 版本需配合直接參照。直接 `xunit.v3.mtp-v2` 可作為測試／MTP 證據，但不把 xUnit 套件版本當成 MTP 精確版本；明確 `IsTestProject=false` 仍排除，MTP 版本證據衝突無法經確認略過。
+
+本版僅依工作區內可直接解析的專案、props、targets 與 Import 辨識，不解析 SDK 內部、傳遞套件或工作區外上層設定。套件證據 `no` 表示未在可讀設定找到直接參照，會停用指令，並不表示已確認實際環境缺少套件；`unknown` 須由使用者確認實際環境，已知衝突仍不可略過。無不確定設定且沒有已辨識測試證據的 `Microsoft.NET.Sdk` 專案不列入清單；若測試設定僅由未解析來源提供，可能無法列出或產生指令。`MSTest.Sdk` 可辨識為測試專案，套件仍可能未確認。
+
+Claude／Codex 模式面板新增「預設提示詞」分頁。Full 各提供 Unit、Integration、Aspire、TUnit 四份公版，Lite 各提供 Unit 一份；可展開、收合、手動選取與複製完整純文字。保留 Claude `/`、Codex `$` 及待填欄位，提供 `.csproj` 工作區相對路徑範例；查看與複製可離線使用，不啟動工作流程。
+
+## 延續 v0.8.2 的功能
 
 Codex Full 的 Agents 區塊依序為 Unit、Integration、Aspire、TUnit；Full／Lite 套用或重設後保留目前捲動位置與已展開的 Agent 技術資訊，方便連續調整模型與推理強度。
 
-本版修正舊版移轉工作區解除安裝 Full 模式後，中央部署 manifest 被誤判為無效、無法重新安裝的問題。歷史移轉紀錄不再被當成目前已安裝模式；其他模式的檔案與使用者自訂內容仍受保護。已受影響的 manifest 可直接讀取，不需要手動刪除或修改。
+v0.8.2 修正舊版移轉工作區解除安裝 Full 模式後，中央部署 manifest 被誤判為無效、無法重新安裝的問題。歷史移轉紀錄不再被當成目前已安裝模式；其他模式的檔案與使用者自訂內容仍受保護。已受影響的 manifest 可直接讀取，不需要手動刪除或修改。
 
-下載 [v0.8.2 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.2) 中的 `dotnet-testing-agent-0.8.2.vsix`。完整步驟請見 [v0.8.2 安裝與升級指南](docs/v0.8.2.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
-
-本版預設離線安裝內容：
+## 內建離線版本
 
 | 內容 | 內建版本 |
 | --- | --- |
@@ -61,7 +77,7 @@ Shared Skills v2.4.5 承接前版修正，更新 Web API／Aspire 測試範本�
 
 ## Full／Lite 模式
 
-以下截圖沿用 v0.8.0，供辨識查看模式與安裝狀態；v0.8.2 的版本資訊及操作按鈕以本文說明為準。
+以下截圖沿用 v0.8.0，供辨識查看模式與安裝狀態；v0.8.3 的版本資訊及操作按鈕以本文說明為準。
 
 ![Codex Full 與 Lite 可同時安裝，目前查看模式與安裝狀態分開顯示](images/v0.8.0-codex-modes-overview.png)
 
@@ -75,7 +91,7 @@ Codex Full／Lite 的每個受管理 Agent 都可獨立選擇模型，選單依�
 
 ![Codex Lite 的 Agent 資產狀態與模型設定集中在同一卡片](images/v0.8.0-codex-lite-agent-settings.png)
 
-此截圖為 v0.8.0；v0.8.2 的模型順序與「套用」「重設」操作依下列說明，已不使用舊版的預覽確認流程。
+此截圖為 v0.8.0；v0.8.3 的模型順序與「套用」「重設」操作依下列說明，已不使用舊版的預覽確認流程。
 
 Codex Full 的 16 個 Agents 依 Unit、Integration、Aspire、TUnit 排列；Codex Lite 顯示兩個 Unit Agents。套用、重設及背景更新後，保留目前捲動位置與已展開的 Agent 技術資訊。
 
@@ -91,7 +107,7 @@ Codex Full 的 16 個 Agents 依 Unit、Integration、Aspire、TUnit 排列；Co
 
 ## 使用方式
 
-1. 安裝提供的 `dotnet-testing-agent-0.8.2.vsix`，完整重啟 VS Code。
+1. 安裝提供的 `dotnet-testing-agent-0.8.3.vsix`，完整重啟 VS Code。
 2. 開啟目標 workspace，從工具包側邊欄展開 Claude 或 Codex。
 3. 選擇 Full 或 Lite 並安裝需要的模式；四個模式可同時存在。
 4. 執行環境診斷。
