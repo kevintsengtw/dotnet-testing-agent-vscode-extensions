@@ -12,11 +12,21 @@
 - **Codex Agent 設定**：可針對單一 Agent 調整模型與推理強度；Full 與 Lite 的設定各自保留。
 - **工作區檔案保護**：保留使用者自訂檔案與既有設定，部署失敗時復原原有內容。
 
-## 最新版本：v0.8.3
+## 最新版本：v0.8.4
 
-下載 [v0.8.3 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.3) 中的 `dotnet-testing-agent-0.8.3.vsix`。完整步驟請見 [v0.8.3 安裝與升級指南](docs/v0.8.3.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
+下載 [v0.8.4 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.4) 中的 `dotnet-testing-agent-0.8.4.vsix`。完整步驟請見 [v0.8.4 安裝與升級指南](docs/v0.8.4.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
 
-### v0.8.3：Code Coverage 與預設提示詞
+## v0.8.4：既有 Skill 共存與衝突提示
+
+既有 Claude Full 工作區可在核對來源後直接加裝 Lite，保留原 Skill 的內容與未接管狀態。Windows／macOS 安裝及既有工作區處理方式見 [v0.8.4 安裝與升級指南](docs/v0.8.4.md)。
+
+相同內容的既有 Skills 不再因模式來源版本不同而被誤報為 `MIXED_VERSION_CONFLICT`。Claude Full v1.7.3 與 Lite v1.2.0 的既有 `dotnet-test` 若通過來源紀錄及實際雜湊核對，可沿用既有正式原檔，保留其內容與未接管狀態；未知來源與使用者修改仍受保護。
+
+安裝本次更新的 v0.8.4 VSIX 並完整重啟 VS Code 後，保留既有 Full，直接安裝 Claude Lite；不需要先解除安裝 Full 或移走 Skill。安裝通知與環境診斷會說明沿用的來源差異，各模式的原始來源證據仍保留。移除或更新 Extension 不會清除工作區檔案。
+
+四模式內建離線版本沿用 v0.8.3，保留 Code Coverage 與預設提示詞功能。2026-10-16 使用者確認 macOS R2 可保留既有 Full、安裝 Lite，安裝後診斷畫面正常。Windows 11 已透過實際 VS Code 面板完成四模式乾淨安裝、環境診斷及既有 Full 工作區加裝 Lite，既有檔案保持不變。共存後 Full 僅有既有用量統計範圍提醒，其餘三模式正常；驗證範圍不包含 .NET 測試工作流程執行。
+
+## v0.8.3：Code Coverage 與預設提示詞
 
 新增獨立、預設收合的「Code Coverage」區塊，不需先初始化工作流程模式。掃描 `.sln`／`.slnx` 的實際測試專案成員，依 VSTest 或 MTP 原生／舊版相容模式產生 Coverage 與 HTML Report 指令，提供分別複製與成功回饋。
 
