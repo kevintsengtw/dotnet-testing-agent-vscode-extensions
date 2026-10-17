@@ -1,0 +1,1337 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "cf6160db222ab0f245a4e947ea2522aeb1a745c5c8766b8125781b29e388c861"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c6a0557a5b94c75a4ca221e3f063dd456d0c9540779217447fc8e1ce1eeae2f3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "05a39c8a3e3b6f07ed6e7de5ee4e8b26fff55a38298b1b33de0e60eb5da6e7e5"
+    },
+    {
+      "path": "aspire/practice_aspire/Practice.Aspire.Net10.slnx",
+      "sha256": "8f7b160f4cc546e797577ebbdfc59479b4ed17bb3dfe65d8ae7333a9cf9dce20"
+    },
+    {
+      "path": "aspire/practice_aspire/Practice.Aspire.Net8.slnx",
+      "sha256": "1f63306b4bd6d0371b672f79edcb69e4d505752d82158c36942504574d3f8517"
+    },
+    {
+      "path": "aspire/practice_aspire/Practice.Aspire.slnx",
+      "sha256": "49ede2deaeec1b0775f1686eb81ed216f8bcfdec8bee4cfa6bafdac1b87b3495"
+    },
+    {
+      "path": "aspire/practice_aspire/README.md",
+      "sha256": "8f1baab6857a2452ff81dcc06fd59825a8fb11cee47a35d8c15826466c3bd46d"
+    },
+    {
+      "path": "aspire/practice_aspire/global.json",
+      "sha256": "1bb0e6c81768d5bc0b186bb227b263988d8ac01835d5b7d729c25d1d548df89d"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.AppHost/Practice.Aspire.AppHost.csproj",
+      "sha256": "3819f145ae36337a9d5781510a55b96537472896b09d72447e7bfd34687c4da0"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.AppHost/Program.cs",
+      "sha256": "0985195acd327e0625e01e659e748ce7bf21d83baa4055ca9d3f1da931cabb58"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.AppHost/Practice.Aspire.Net10.AppHost.csproj",
+      "sha256": "0598f7ef62a5ce2c1b07f6e669dc9272d950d97c6d7a18235959856f5ccde492"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.AppHost/Program.cs",
+      "sha256": "9cfb71cd748a011ab3216a22dc1f8c8819a93e3f7f3645661d939e08d3e5fe79"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Controllers/BookingsController.cs",
+      "sha256": "d4c7e04cebe14f8649232bfcae44cbe50777c2b7d63087601f037b5352f38a52"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Data/BookingDbContext.cs",
+      "sha256": "55d217f7a2d101faf1b91751cf67423533da5524e3630842864b32de182f93fa"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Handlers/FluentValidationExceptionHandler.cs",
+      "sha256": "9d201e2e50ab289e094bd21cbeb37de682a6fd0f6417db330474b852d01ad402"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Handlers/GlobalExceptionHandler.cs",
+      "sha256": "c3cba6923a3e6098c57e0531714279fa99051878a4f21800c273917ddf6cdff5"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Models/Booking.cs",
+      "sha256": "7b76d661468c0ada1af01d17404228fb2b7313a1d4d5c66d2456a162a3c73f36"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Models/BookingRequests.cs",
+      "sha256": "465cb9efac55b9f73d5e930ac4393ee8af17e5b92de13e345a4b8cb1db775c6b"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Practice.Aspire.Net10.WebApi.csproj",
+      "sha256": "a85679496f7acc693e74346724ced3f3e3d6c8d16497aee20b03ffdd62bf6467"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Program.cs",
+      "sha256": "ed0119e5230480891754047052c17ca0180759abec08f3e5ab624b25ddb40cf4"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Properties/launchSettings.json",
+      "sha256": "f16928a244c5aefe4397261c2dc74701dc2db6f106927eff996a9e6eb5698d59"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/Validators/BookingValidators.cs",
+      "sha256": "e5f2312d3acbb7308699dd62980dca9ead83c7c7d01d1582a5a65f286ba1c186"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net10.WebApi/appsettings.json",
+      "sha256": "bc7a410c52c3f6d5c3f795de43a861e884fb48ea9cb1a3d25715e88a7afb1d04"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.AppHost/Practice.Aspire.Net8.AppHost.csproj",
+      "sha256": "f072ea1261a89d8e3d7960ac319f7e893e80eef7ca35b7141be4ce46c09e53d2"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.AppHost/Program.cs",
+      "sha256": "5d8db3ceee59e5b5c477e2f7841a27cec722dc9b7e5498abde87fdadb4fa3dcd"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Controllers/BookingsController.cs",
+      "sha256": "2e5fa696a76ba36c9eb73e705b78eb6dfad1e1e22e017d728f1bcbe02397b315"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Data/BookingDbContext.cs",
+      "sha256": "f8d4d20864f663660ff98d25e5c21cbd595597d25cb1f8e45994174180a56c8e"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Handlers/FluentValidationExceptionHandler.cs",
+      "sha256": "16f5a4ceec0bd599a80eed07bff3375f1d62535aee5de6a772a02a8d32f3cc44"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Handlers/GlobalExceptionHandler.cs",
+      "sha256": "b1a835e017f9fad7e7e6de9a184bce9fc0bf60114ac119143673bf3b7678f09a"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Models/Booking.cs",
+      "sha256": "fb3956c5c6d33de19900efc775be5afeac80318d70c74965e090fb3291f25aef"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Models/BookingRequests.cs",
+      "sha256": "742d4c27c08fe01995b8be4dd039e4249f03d0dbf6a1f399ee1caaf72df88fdf"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Practice.Aspire.Net8.WebApi.csproj",
+      "sha256": "7d163ca1a66717707f32f1f9f89cee2b7763f320f41906a6202bf9409729362d"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Program.cs",
+      "sha256": "4acd2f5c14e855e48dcb6cec04e7fcd2949a8c41bc2b2a7f038dbbb253966054"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Properties/launchSettings.json",
+      "sha256": "04e6972665a4a08362f1dfd1ca7f1301ef4c4d32b3cb911553c0321c982e9262"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/Validators/BookingValidators.cs",
+      "sha256": "3d869958bdbeeee64d1b956bdc2f0473758478f6bf4b70c640b57e8442377937"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.Net8.WebApi/appsettings.json",
+      "sha256": "20ce3baff30ad77a9080fc9b31c4f9d0281c57ea322ff34d366536d4d3749a70"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Controllers/BookingsController.cs",
+      "sha256": "1f042490332e1dbd5bd7f9b12d467631d3daee01e822a97ad3ae4c5267c8065e"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Data/BookingDbContext.cs",
+      "sha256": "531a37de2c27ea880febd9ee35485a78ffc07b28222f3c7b658206505ecea4e8"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Handlers/FluentValidationExceptionHandler.cs",
+      "sha256": "efe8ba68494f51f536b9bbba7bbba8c8d02570c87edac23340ccd8a4949bd302"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Handlers/GlobalExceptionHandler.cs",
+      "sha256": "c6bfd952e0c731a65b431a3041f2c2e0ed244e1585b70cc8f5af1912f8e96884"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Models/Booking.cs",
+      "sha256": "05a54976a746f0afcedc1f77bf8f146a597caf8598549b97f0d129554f3d0482"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Models/BookingRequests.cs",
+      "sha256": "a2375940d465b585bbb6e1a37dea56300cd4978120f36193b4b0bd9ae63a5048"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Practice.Aspire.WebApi.csproj",
+      "sha256": "0ab0283d31ed6034cfc85704e54ff2f58c9c30ce11369031696ce2ca72acde1d"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Program.cs",
+      "sha256": "858c537dd447ea6de8f08511f9fa2be1658b0758344e140def13a54a63a088f2"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Properties/launchSettings.json",
+      "sha256": "ccfddc7644355c7fd42fc4b87039ecbe93a3536b6010f3b1b1a5df647004fd57"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/Validators/BookingValidators.cs",
+      "sha256": "8d502134a54be47df6564ec2fa9f6861d901065965a7ce33427d8c27677df515"
+    },
+    {
+      "path": "aspire/practice_aspire/src/Practice.Aspire.WebApi/appsettings.json",
+      "sha256": "cfd2d406a742ba3c734ddd3746bc3eda6204d11ddc1015559d3dba962885d4ae"
+    },
+    {
+      "path": "aspire/practice_aspire/tests/Practice.Aspire.AppHost.Tests/Practice.Aspire.AppHost.Tests.csproj",
+      "sha256": "8cd509e0044609f8abbd66c70bd3114119fdcb43ee2b42d1f94897b86806028f"
+    },
+    {
+      "path": "aspire/practice_aspire/tests/Practice.Aspire.Net10.AppHost.Tests/Practice.Aspire.Net10.AppHost.Tests.csproj",
+      "sha256": "9d5b15c37741fffeffcc031a45479dd6139b4b29e793aadfee39543f40674e23"
+    },
+    {
+      "path": "aspire/practice_aspire/tests/Practice.Aspire.Net8.AppHost.Tests/Practice.Aspire.Net8.AppHost.Tests.csproj",
+      "sha256": "427f7f9590ef745a70fb9c8d3fde1ca0f38861686fbcf91958077b955f5577a8"
+    },
+    {
+      "path": "coverage-mtp-legacy/Practice.TUnit.Coverage.Legacy.sln",
+      "sha256": "e5fe04b8b19cbdaaa6ab8084c85da827fe1e7762628f36fc378967226063ccff"
+    },
+    {
+      "path": "coverage-mtp-legacy/Practice.TUnit.Coverage.Legacy.slnx",
+      "sha256": "6793e896ef769b87827dccb440aeb1356748feab7ce85fd67c54a9284b734e46"
+    },
+    {
+      "path": "coverage-mtp-legacy/README.md",
+      "sha256": "97ce5cfaa59277ee2841102c2610964adbf0c85e0d80e1d2695321bf7ea94005"
+    },
+    {
+      "path": "coverage-mtp-legacy/global.json",
+      "sha256": "872a806462a4156106c72d9e0e8c23b27b5fd7c5961d85f69db8f4c662efcb42"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Interfaces/IBookRepository.cs",
+      "sha256": "de03f9d37035b5890b4c055f783b70f6dd307f0e6892b2313573be6b2c15c75e"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Interfaces/ILoanRepository.cs",
+      "sha256": "54710538f0a499a4c2f94ccb7e6660044c0733182cdc3bd145cfa9c6d77f9441"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Interfaces/IMemberRepository.cs",
+      "sha256": "78af60c6ed6430ea71901d7c81ba5ae1d652600d2b1acd01c9aa79a4f3cc6bb4"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Interfaces/INotificationService.cs",
+      "sha256": "ce9d90ebd2a5dbb4997b37f3fd077d135ff0bf34cd78d7a15d1ac30b4f4f5756"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Models/Book.cs",
+      "sha256": "cbf20ba148584fe63f4b9aa2f70d5b7434ed7d8ff8c185daa45971abf6be6ea1"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Models/LibraryMember.cs",
+      "sha256": "91b5a57bd5c73e91c21f9053dd40e1e140f04a150f0098afd53a12ab2e21862c"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Models/Loan.cs",
+      "sha256": "42314f029a49ae1e5ae687adb34a50cc0ee2a04f3979dac9157537ccc1dccc3d"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Models/Reservation.cs",
+      "sha256": "fafa5ef97e78017003d2868312a524b60b513044c51836aeb966f925c9765b56"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Practice.TUnit.Net10.Core.csproj",
+      "sha256": "64897438c3de454291f5efee56f381d62958cfcf7234eafcbdd511613af5f421"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Services/BookCatalog.cs",
+      "sha256": "7cf50511625ebe2e3ca6ff48a0f70cfabe428b9a27e54060e75cad9eb0cf2118"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Services/CatalogExportService.cs",
+      "sha256": "4ab361c805a87c0a3e487a93c17c3c3628a6be1bc1e3dc9305b4098ee2a81cf7"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Services/LibraryMemberService.cs",
+      "sha256": "4c875118f2bc8d2213a1754f0f1b6966d324736bfe24d3d1ef2967afac03d6f4"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Services/LoanService.cs",
+      "sha256": "f573506fbdea59497d861f963b89261e172270deb05fc8e2b1645ca7f40c640a"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net10.Core/Services/ReservationService.cs",
+      "sha256": "7c996e734185c6bb12972bcef1f52ac6f597be410e37af91a793dc6010284aca"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Interfaces/IBookRepository.cs",
+      "sha256": "156959732ebaea763352161a86af7e29cf11d62a2a8b5bc69dadbba7c8638e08"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Interfaces/ILoanRepository.cs",
+      "sha256": "8dd9b638e66bbeca8aa6418eb164a9412abb12ca9909893713f2b26f0989c005"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Interfaces/IMemberRepository.cs",
+      "sha256": "9cbe3ae51d89399ecdc422ebd1855d3009bbb3581c618bc4fbae49d3ed04efd0"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Interfaces/INotificationService.cs",
+      "sha256": "0266bca4ef94ad9e28ac05dd7c165933d0e38a2577e371848315b30c69385af3"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Models/Book.cs",
+      "sha256": "dc46031628fc98ebe7e7cc0d126f34ebbeb7e6b17a6b7451314b8d308d1d051a"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Models/LibraryMember.cs",
+      "sha256": "5ded6ff91369f18ce283c25dba174274f3cd4cdb57aa70f5ebba71cafd78ee6d"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Models/Loan.cs",
+      "sha256": "b1e92597f0a8df4af156318196f926af244aed2fb293713e89687766d1846bec"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Models/Reservation.cs",
+      "sha256": "4fb3392bb9f21f37f48dec0cbb4bc685e6ad4db4b727dc8f7959c910d5718b3d"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Practice.TUnit.Net8.Core.csproj",
+      "sha256": "900b601b4b27f31a0b2c7c075912a372babc47f95e01d122e724f2e9a62ec081"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Services/BookCatalog.cs",
+      "sha256": "7e4cb7e54cf3a554cdd094c5fdcc25df7c5847698b23f49e93ee7bb5b75baf54"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Services/CatalogExportService.cs",
+      "sha256": "2bcce69f27888dc432a27cf63cff8ff2a2bd4581af0a50f5ddb5e56d304ed2de"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Services/LibraryMemberService.cs",
+      "sha256": "c85f2c6e8573d3fc4678f3582e4df0b5f4fe257d2206e5afa94107bf9dfb70c7"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Services/LoanService.cs",
+      "sha256": "f44fde71a205bfb0efb758b2b5840610469505f1b22a79dea499b1511cf48415"
+    },
+    {
+      "path": "coverage-mtp-legacy/src/Practice.TUnit.Net8.Core/Services/ReservationService.cs",
+      "sha256": "6cf6ab1a1220994651dc1089ee492092d37e9dd2a235929a4dd004a36dee434a"
+    },
+    {
+      "path": "coverage-mtp-legacy/tests/Practice.TUnit.Net10.Core.Tests/BookCatalogCoverageTests.cs",
+      "sha256": "2115bab98bb99c8d5f400b60c135f9becf3998f8c6e766ffa8ac89a980e5a48e"
+    },
+    {
+      "path": "coverage-mtp-legacy/tests/Practice.TUnit.Net10.Core.Tests/Practice.TUnit.Net10.Core.Tests.csproj",
+      "sha256": "1178a40c4f2a2f40271d986058d719f10cc0ed4164aef64ebaa6ee65decf2404"
+    },
+    {
+      "path": "coverage-mtp-legacy/tests/Practice.TUnit.Net8.Core.Tests/BookCatalogCoverageTests.cs",
+      "sha256": "af061c225437877b9321cffba928552b08e46bd80c1c6be0e2ee3d26b3d05507"
+    },
+    {
+      "path": "coverage-mtp-legacy/tests/Practice.TUnit.Net8.Core.Tests/Practice.TUnit.Net8.Core.Tests.csproj",
+      "sha256": "c6a1bb747320899ea6d81e3754c375f1ee8df3cee49a6e3185205d6341dcd415"
+    },
+    {
+      "path": "coverage-mtp-native/Practice.TUnit.Coverage.Native.sln",
+      "sha256": "6c699b093f6b554d34a0bb0eab63095e17fbc0c203de7badf247a282830eb97d"
+    },
+    {
+      "path": "coverage-mtp-native/Practice.TUnit.Coverage.Native.slnx",
+      "sha256": "6793e896ef769b87827dccb440aeb1356748feab7ce85fd67c54a9284b734e46"
+    },
+    {
+      "path": "coverage-mtp-native/README.md",
+      "sha256": "03db37436fb840e4d3a7683625e8422d2957653b0dcaac22d27d4ebf4b333d31"
+    },
+    {
+      "path": "coverage-mtp-native/global.json",
+      "sha256": "f8ecaa8e7896cc5eb32422d63d3765f08d0f560218bdbbfb114d9fcd0d0b0d53"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Interfaces/IBookRepository.cs",
+      "sha256": "de03f9d37035b5890b4c055f783b70f6dd307f0e6892b2313573be6b2c15c75e"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Interfaces/ILoanRepository.cs",
+      "sha256": "54710538f0a499a4c2f94ccb7e6660044c0733182cdc3bd145cfa9c6d77f9441"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Interfaces/IMemberRepository.cs",
+      "sha256": "78af60c6ed6430ea71901d7c81ba5ae1d652600d2b1acd01c9aa79a4f3cc6bb4"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Interfaces/INotificationService.cs",
+      "sha256": "ce9d90ebd2a5dbb4997b37f3fd077d135ff0bf34cd78d7a15d1ac30b4f4f5756"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Models/Book.cs",
+      "sha256": "cbf20ba148584fe63f4b9aa2f70d5b7434ed7d8ff8c185daa45971abf6be6ea1"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Models/LibraryMember.cs",
+      "sha256": "91b5a57bd5c73e91c21f9053dd40e1e140f04a150f0098afd53a12ab2e21862c"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Models/Loan.cs",
+      "sha256": "42314f029a49ae1e5ae687adb34a50cc0ee2a04f3979dac9157537ccc1dccc3d"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Models/Reservation.cs",
+      "sha256": "fafa5ef97e78017003d2868312a524b60b513044c51836aeb966f925c9765b56"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Practice.TUnit.Net10.Core.csproj",
+      "sha256": "64897438c3de454291f5efee56f381d62958cfcf7234eafcbdd511613af5f421"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Services/BookCatalog.cs",
+      "sha256": "7cf50511625ebe2e3ca6ff48a0f70cfabe428b9a27e54060e75cad9eb0cf2118"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Services/CatalogExportService.cs",
+      "sha256": "4ab361c805a87c0a3e487a93c17c3c3628a6be1bc1e3dc9305b4098ee2a81cf7"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Services/LibraryMemberService.cs",
+      "sha256": "4c875118f2bc8d2213a1754f0f1b6966d324736bfe24d3d1ef2967afac03d6f4"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Services/LoanService.cs",
+      "sha256": "f573506fbdea59497d861f963b89261e172270deb05fc8e2b1645ca7f40c640a"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net10.Core/Services/ReservationService.cs",
+      "sha256": "7c996e734185c6bb12972bcef1f52ac6f597be410e37af91a793dc6010284aca"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Interfaces/IBookRepository.cs",
+      "sha256": "156959732ebaea763352161a86af7e29cf11d62a2a8b5bc69dadbba7c8638e08"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Interfaces/ILoanRepository.cs",
+      "sha256": "8dd9b638e66bbeca8aa6418eb164a9412abb12ca9909893713f2b26f0989c005"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Interfaces/IMemberRepository.cs",
+      "sha256": "9cbe3ae51d89399ecdc422ebd1855d3009bbb3581c618bc4fbae49d3ed04efd0"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Interfaces/INotificationService.cs",
+      "sha256": "0266bca4ef94ad9e28ac05dd7c165933d0e38a2577e371848315b30c69385af3"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Models/Book.cs",
+      "sha256": "dc46031628fc98ebe7e7cc0d126f34ebbeb7e6b17a6b7451314b8d308d1d051a"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Models/LibraryMember.cs",
+      "sha256": "5ded6ff91369f18ce283c25dba174274f3cd4cdb57aa70f5ebba71cafd78ee6d"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Models/Loan.cs",
+      "sha256": "b1e92597f0a8df4af156318196f926af244aed2fb293713e89687766d1846bec"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Models/Reservation.cs",
+      "sha256": "4fb3392bb9f21f37f48dec0cbb4bc685e6ad4db4b727dc8f7959c910d5718b3d"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Practice.TUnit.Net8.Core.csproj",
+      "sha256": "900b601b4b27f31a0b2c7c075912a372babc47f95e01d122e724f2e9a62ec081"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Services/BookCatalog.cs",
+      "sha256": "7e4cb7e54cf3a554cdd094c5fdcc25df7c5847698b23f49e93ee7bb5b75baf54"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Services/CatalogExportService.cs",
+      "sha256": "2bcce69f27888dc432a27cf63cff8ff2a2bd4581af0a50f5ddb5e56d304ed2de"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Services/LibraryMemberService.cs",
+      "sha256": "c85f2c6e8573d3fc4678f3582e4df0b5f4fe257d2206e5afa94107bf9dfb70c7"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Services/LoanService.cs",
+      "sha256": "f44fde71a205bfb0efb758b2b5840610469505f1b22a79dea499b1511cf48415"
+    },
+    {
+      "path": "coverage-mtp-native/src/Practice.TUnit.Net8.Core/Services/ReservationService.cs",
+      "sha256": "6cf6ab1a1220994651dc1089ee492092d37e9dd2a235929a4dd004a36dee434a"
+    },
+    {
+      "path": "coverage-mtp-native/tests/Practice.TUnit.Net10.Core.Tests/BookCatalogCoverageTests.cs",
+      "sha256": "2115bab98bb99c8d5f400b60c135f9becf3998f8c6e766ffa8ac89a980e5a48e"
+    },
+    {
+      "path": "coverage-mtp-native/tests/Practice.TUnit.Net10.Core.Tests/Practice.TUnit.Net10.Core.Tests.csproj",
+      "sha256": "4043a2cced22cdfdc95e27f28d9109f03735d1d4ce4f8d27fba8d3dc51467a1b"
+    },
+    {
+      "path": "coverage-mtp-native/tests/Practice.TUnit.Net8.Core.Tests/BookCatalogCoverageTests.cs",
+      "sha256": "af061c225437877b9321cffba928552b08e46bd80c1c6be0e2ee3d26b3d05507"
+    },
+    {
+      "path": "coverage-mtp-native/tests/Practice.TUnit.Net8.Core.Tests/Practice.TUnit.Net8.Core.Tests.csproj",
+      "sha256": "51706489c06a9bb7b9813127bd90306cc526b410c3e03b59ba3b73c61a5c07ce"
+    },
+    {
+      "path": "guides/apply-to-your-project.md",
+      "sha256": "279be08b2d0e1f3e6f04c162560ec91e36acfd6d5ffbb6aa7d79571e61b5a10e"
+    },
+    {
+      "path": "guides/code-coverage.md",
+      "sha256": "6bdbe0ab0c2af1fdf62b0e4fbe4c81d2170fdca029f6a1287c01b471579ebf9e"
+    },
+    {
+      "path": "guides/containers.md",
+      "sha256": "6c9633cdeb7693739adfffccb1364b64721899b773229af5b1c2b696eaea320a"
+    },
+    {
+      "path": "guides/getting-started.md",
+      "sha256": "13d8bdc434bda08c9bd436455af713da6bf36e98ed6cb475bbd9b2f7176da706"
+    },
+    {
+      "path": "guides/mode-setup.md",
+      "sha256": "fd59aff6227cdc1f029b3257029b9c14e112bac2411127c395b69117f0a0d8aa"
+    },
+    {
+      "path": "guides/troubleshooting.md",
+      "sha256": "a94eff5548827cfefef23266d1e20032024535dd7528a80c05ba8fdfd3b7e366"
+    },
+    {
+      "path": "integration/practice_integration/Practice.Integration.Net10.slnx",
+      "sha256": "c9bf348c6030259e3b7affa780d85c5408b1f090c091d929ddc95da1f3f90b2b"
+    },
+    {
+      "path": "integration/practice_integration/Practice.Integration.Net8.slnx",
+      "sha256": "14c42a13f7bac48e8fb12afc07f75368af143948ec77827f98f088081013da22"
+    },
+    {
+      "path": "integration/practice_integration/Practice.Integration.slnx",
+      "sha256": "06e2bfdaba7cfa50bbd629f353442f8f474e8c700cf2ce7d1791d50d9242dd6a"
+    },
+    {
+      "path": "integration/practice_integration/README.md",
+      "sha256": "d781c0c07fba7e2aa954e8e83e500fb842cf1814f3c9a9c30f0505ed35cc96f0"
+    },
+    {
+      "path": "integration/practice_integration/global.json",
+      "sha256": "1bb0e6c81768d5bc0b186bb227b263988d8ac01835d5b7d729c25d1d548df89d"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Configuration/MongoDbSettings.cs",
+      "sha256": "59fb245ed5b1b179bc14f9e928ce8accfbc4ce03de506663be544106243e6720"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Controllers/CustomerActivitiesController.cs",
+      "sha256": "bb5f2dc2a781601075172647296572e7ea146c8ce707ce49523b7f8233ca7dc2"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Controllers/OrdersController.cs",
+      "sha256": "2e2ce148d737448afcdcf9d738d2fbe4ebfaac2e92d0ca737561669917063df8"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Data/OrderDbContext.cs",
+      "sha256": "f065fe4085a7f8097ac437ab0433ba224abc9a6057d8861c252e4aad091ab0c9"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Handlers/FluentValidationExceptionHandler.cs",
+      "sha256": "9578aecf691dac4c53fef5352e003913c1f429a00e8a5dfca9106804332f71cc"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Handlers/GlobalExceptionHandler.cs",
+      "sha256": "221ea162135a5de36db16d081266edffe3a44f7a93d80fa0ec995c9d08c54b48"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Interfaces/ICacheService.cs",
+      "sha256": "ee67bdfe343bacf94055ae41440ebdd9bce4f476489c48b9c39aad439f9fd80b"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Interfaces/ICustomerActivityRepository.cs",
+      "sha256": "0615cab79495ba9f24544e426267d6fde06cd1398c0e07a773809707a7dcc06c"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Models/CustomerActivity.cs",
+      "sha256": "83f7b28e328f63d5cf7af373d4de0133f77df47667d189dfc8f1d7d1b9016e53"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Models/CustomerActivityRequests.cs",
+      "sha256": "4b2b8bc693e908b56518bf6a3edc2600a13c2316db5a33a91db12c6142dd12f1"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Models/Order.cs",
+      "sha256": "121208ce188a315c73af24a7a4a62a2802c1ad5bffa9725967106df7817fa966"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Models/OrderRequests.cs",
+      "sha256": "4bee7709314aa07ab61eb16a651eab8776c95e64b058daf01037e1152793489b"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Practice.Integration.WebApi.Net10.csproj",
+      "sha256": "a5eaaeacdede6fa4314e5e7e2b0173c3dfdd8e5a377dffaa46288664db468476"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Program.cs",
+      "sha256": "6e0548cdf37727652ce965a81c4195e1be272082cd4de6818a24c0e7c4b526bc"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Services/MongoCustomerActivityRepository.cs",
+      "sha256": "ef7de0fe5ab635df38b3eb00c7c7fd1fa07ee1a515e0379abb66b6cfe22aeb61"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Services/RedisCacheService.cs",
+      "sha256": "15fb19317cfcee481263a72ce8b2f0c287bf764feb21e695d11d1925c513e2d2"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Validators/CustomerActivityValidators.cs",
+      "sha256": "12b9a26c7d422d47db0dd04d8fcd23772cbab251d6019cabb01d9bb6ca7b3a1f"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/Validators/OrderValidators.cs",
+      "sha256": "74e35014fef614d2c28f89d2897c6c20631fab21b2b330507f61727c96cf11fe"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net10/appsettings.json",
+      "sha256": "e87488026cdb16064e741f553008b57520e0864df6e1b22a8bb11eb2acdd0840"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Configuration/MongoDbSettings.cs",
+      "sha256": "8ad5f129553850b4319fced0dc2f15e6549089c24a6fd0f31f959d17af308ca0"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Controllers/CustomerActivitiesController.cs",
+      "sha256": "cf85ac7232f763071e7805c0b3bc60b78cd23a59d49712995e09049678ba5730"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Controllers/OrdersController.cs",
+      "sha256": "85dbeeb6ce44e5a50dcbe1a28d8e7eee12fedc370e9820a679f994e85a8ab043"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Data/OrderDbContext.cs",
+      "sha256": "0700b679c28eaf625acc5eb28df34e6121c2ab65acff0e35b6cc0da75405d3ca"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Handlers/FluentValidationExceptionHandler.cs",
+      "sha256": "adc4e2cac542105e5b16472a17d34a3fbab6630e1eaa118ba860e3eef5d8e72a"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Handlers/GlobalExceptionHandler.cs",
+      "sha256": "64b16f08402ef56bdf041f780618cadf0b5528c9cf9df34297d8c4d48ed09e72"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Interfaces/ICacheService.cs",
+      "sha256": "97fb6e0fa4df333080ab2534866596dd8917caa8df00e509496e547ac839dbe6"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Interfaces/ICustomerActivityRepository.cs",
+      "sha256": "1bc3adb74a89a9bf735aef0297fd73e1a2364c3a90584102c8da5bcfa1dd0b55"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Models/CustomerActivity.cs",
+      "sha256": "d33dec70e7eb19230ad9030506f894c44e163f21dd827af785a4cd4e3804e7a6"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Models/CustomerActivityRequests.cs",
+      "sha256": "1cf08e119522c128ebcf48ac2c99ceb3d87e7389bd8029d184b93c41810dc990"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Models/Order.cs",
+      "sha256": "a2663fe2e49f1c12ac2defbfa6353bc24e05430c12e60a3a1f626ce87ff31d1e"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Models/OrderRequests.cs",
+      "sha256": "cd911c4acc35d2534f9220d2f85c19cf21ac41213557d18d703e4d3ea1f6f0e7"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Practice.Integration.WebApi.Net8.csproj",
+      "sha256": "3ed352fdd72fec6cc9953b7af7fe7ed387c83d36d1b45a3a84a37a65f1a01c94"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Program.cs",
+      "sha256": "6165e629e8a2cb3939b0145204402841d6464536e730ccf82575c6dbb64e589d"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Services/MongoCustomerActivityRepository.cs",
+      "sha256": "8363a8a7c2d8ed6c9ef092ba86633a023e9655c7230384e2c3d4525ab67615be"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Services/RedisCacheService.cs",
+      "sha256": "aeb2db639693eedd53e3ac3d448a3f0fb30eb71e4869652d261c75b042399c32"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Validators/CustomerActivityValidators.cs",
+      "sha256": "a0d21b111e62d7c20f842c906da5eb4cef86ce993512025d61d9a54aac92122a"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/Validators/OrderValidators.cs",
+      "sha256": "bc44b821a6ea6c65d5118b9e7545912c1a0d8f3cbc1d906e602bf7db28fad98b"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi.Net8/appsettings.json",
+      "sha256": "e87488026cdb16064e741f553008b57520e0864df6e1b22a8bb11eb2acdd0840"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Configuration/MongoDbSettings.cs",
+      "sha256": "5f99c6c81ce1595bbcf28425e410366a38f7f0333bd54b92b6b2b18de3dcb25c"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Controllers/CustomerActivitiesController.cs",
+      "sha256": "dbacc814b6bf8ec032a66bfa2c116fd188039f5eaba2798e408f6aab3b34cfdd"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Controllers/OrdersController.cs",
+      "sha256": "2ed1d2b29b7b3f865e3c1c2f7ad65a2199b9cd6edb66d8507da86ee6a4766660"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Data/OrderDbContext.cs",
+      "sha256": "b3f1c0e0f5d625bf6d6ac57e29ff4566d140ac486f65dbed2f0afad594ecbae6"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Handlers/FluentValidationExceptionHandler.cs",
+      "sha256": "3c8bcc60bd13c93034e39a80fc033fed25cdcb53e64b3f8487aeb776575a1a8c"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Handlers/GlobalExceptionHandler.cs",
+      "sha256": "6d334221f601e6a527ab5421fd36e889aaeefd908890a30368ab3d3c6a4ea5f5"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Interfaces/ICacheService.cs",
+      "sha256": "46984acc374dc88251cfdf0d2ce628e703abd5ab0c92bec2ed08fb9119281bb6"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Interfaces/ICustomerActivityRepository.cs",
+      "sha256": "66d3f47fd3392495e2ee03e999111aa747e25cc50bd389b5905c528f12e589a2"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Models/CustomerActivity.cs",
+      "sha256": "2e9cac15f4325f4b3400d0d60bdff4225b6b0ca4bb2bff4e20952ae7e4828fc9"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Models/CustomerActivityRequests.cs",
+      "sha256": "c5a480350b00751d32ddcd5995e79f627dd9186bdba9da8c8af14b3c3411efd9"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Models/Order.cs",
+      "sha256": "c89e730074666813550d31224c7f65d72af08800382b221d11095a517a1b2a9e"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Models/OrderRequests.cs",
+      "sha256": "b126a2fe6297ef10ab57acbaf234f73c4b4becea73d01c8b9b03213f10df0d19"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Practice.Integration.WebApi.csproj",
+      "sha256": "cb12493e0a0fd3247df2ff3d13d449a95999f92c1232047656507b600f28c763"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Program.cs",
+      "sha256": "fae3a478c7a6a05fc166ec7d1e6e6ce2887b6e3add26aedb6b7fbdec77255e09"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Services/MongoCustomerActivityRepository.cs",
+      "sha256": "9308ae9ac9bb0a23351045997a220e1885c9e455f75b6c2cf5c68d9c18636b0f"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Services/RedisCacheService.cs",
+      "sha256": "22376d91c1acc7122855f2286a258b33634f64003b14c95ab08bb6438fe3b3b9"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Validators/CustomerActivityValidators.cs",
+      "sha256": "9462f8283347efbf25aa3559c4b9647309a8e6b39c6b36b934bd58ab333eef42"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/Validators/OrderValidators.cs",
+      "sha256": "a08dfc5a72234ad9e936c23ce4376fa25aa728d8f5e93bdf632ee051e160f4b1"
+    },
+    {
+      "path": "integration/practice_integration/src/Practice.Integration.WebApi/appsettings.json",
+      "sha256": "e87488026cdb16064e741f553008b57520e0864df6e1b22a8bb11eb2acdd0840"
+    },
+    {
+      "path": "integration/practice_integration/tests/Practice.Integration.WebApi.Net10.Tests/Practice.Integration.WebApi.Net10.Tests.csproj",
+      "sha256": "ea958ff67c7e9bf53aab976156a0ccfecd35ea6725e200f71559d35857a8e239"
+    },
+    {
+      "path": "integration/practice_integration/tests/Practice.Integration.WebApi.Net8.Tests/Practice.Integration.WebApi.Net8.Tests.csproj",
+      "sha256": "478393994fa82267431d64e8a3e1848fb1c226922fde5eb5d43e30288b7df80e"
+    },
+    {
+      "path": "integration/practice_integration/tests/Practice.Integration.WebApi.Tests/Practice.Integration.WebApi.Tests.csproj",
+      "sha256": "59d162664fc67c0bd416dbc33644a739eaf198ebe7a7f9ec1dcb297ca2590ed5"
+    },
+    {
+      "path": "tunit/practice_tunit/Practice.TUnit.Net10.slnx",
+      "sha256": "62ee5b15383c3d41b39c578e1ba1004cb37499883e2c13d5b88c350d463fd8db"
+    },
+    {
+      "path": "tunit/practice_tunit/Practice.TUnit.Net8.slnx",
+      "sha256": "8d2cee20d3935671caec66e31e91b8fbf02560a78a1d59a37fe10d33f6143acd"
+    },
+    {
+      "path": "tunit/practice_tunit/Practice.TUnit.slnx",
+      "sha256": "0bd36c6d9cf39f4cb7a8515719ac01d8a5adf9950e1a52e71e0b195c7cb3fcd8"
+    },
+    {
+      "path": "tunit/practice_tunit/README.md",
+      "sha256": "67dc29d0c04b144b737ae823299054c102fcc5645fbf0d3477e0898819ae9fcf"
+    },
+    {
+      "path": "tunit/practice_tunit/global.json",
+      "sha256": "20c93ca7812d0a9825eef71217156f95ab2f4fe5aadfeb22ebc1c24b630018d3"
+    },
+    {
+      "path": "tunit/practice_tunit/migration_source/BookCatalogXunitTests.cs",
+      "sha256": "52b44e8bcfbbb695740ed45878fe1f8dad32ac47a74cf3d632bbb8708306a056"
+    },
+    {
+      "path": "tunit/practice_tunit/migration_source/Practice.TUnit.Net10.Xunit.Tests.csproj",
+      "sha256": "2264a1c862ce42716e8b7881e235bdd13bd27c4c30ab79eb4e13894a81c3f7cb"
+    },
+    {
+      "path": "tunit/practice_tunit/migration_source/README.md",
+      "sha256": "028ffdaf901f854860bcfa06b70e2d30ca1df59032c9c8f6b11153238d918fc4"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Interfaces/IBookRepository.cs",
+      "sha256": "18beb63d2a9c2217db9130e4f6a83d7ccda3c23a121d72c3607458f563a8b8cf"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Interfaces/ILoanRepository.cs",
+      "sha256": "3a25d22639126dd94d4cbbb168afd5f32b802ea701396429885b91b230cfa2ad"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Interfaces/IMemberRepository.cs",
+      "sha256": "b65b5b8c4be29610299f557f849ebedb9229452671fc711fc9a45e952e29c8cf"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Interfaces/INotificationService.cs",
+      "sha256": "e568165a880bbd922d1cfe28ef3a2b67b956218f02313aa862ecaaccffb18c1b"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Models/Book.cs",
+      "sha256": "73558c034b6e002b7cce40f04a7e1fbf18d62acd8e87919b64617b9b6cf166f5"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Models/LibraryMember.cs",
+      "sha256": "f13495ff27fca36e370f64993b451e99b9a4592d2f5f96f86957591e2637266f"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Models/Loan.cs",
+      "sha256": "03c8c12540daa3a5c0c8b294dab2a228c275ce27945acb7f102f3d060f42011d"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Models/Reservation.cs",
+      "sha256": "264f2117739ea29752e724ac29eb7043287f6ca3cbfbf379a4075c0f9dfac353"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Practice.TUnit.Core.csproj",
+      "sha256": "01480583d36ed84a3c8f244a50c577d274c577a20fd808e8b513634446a81c55"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Services/BookCatalog.cs",
+      "sha256": "cfcf856c30d42c48d645c8648df7ad67b871a04475d8f000f1b0ef5f60c453b5"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Services/CatalogExportService.cs",
+      "sha256": "a5d12ec1e5e98524a2f0ded5c656368f9707b560ab4a4042b18f1cd34c9aadeb"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Services/LibraryMemberService.cs",
+      "sha256": "1b2bf84a12e3f55fba8d11dba58b48071e98a03162acd2496e05c8ccac5ea86c"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Services/LoanService.cs",
+      "sha256": "d273ef5679336ff9551625137548ef643648ac08dca45366412ec028e3b38cbc"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Services/ReservationService.cs",
+      "sha256": "c92dd7cdede1b48814e461ffecf82869461203e4c5b3ecd4e965f0196c860d4a"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Core/Validators/LibraryMemberValidator.cs",
+      "sha256": "4a731fc778e6f62eef57a511dcb89fffdfdbe5897f15d41729da770dd1901c83"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Interfaces/IBookRepository.cs",
+      "sha256": "de03f9d37035b5890b4c055f783b70f6dd307f0e6892b2313573be6b2c15c75e"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Interfaces/ILoanRepository.cs",
+      "sha256": "54710538f0a499a4c2f94ccb7e6660044c0733182cdc3bd145cfa9c6d77f9441"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Interfaces/IMemberRepository.cs",
+      "sha256": "78af60c6ed6430ea71901d7c81ba5ae1d652600d2b1acd01c9aa79a4f3cc6bb4"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Interfaces/INotificationService.cs",
+      "sha256": "ce9d90ebd2a5dbb4997b37f3fd077d135ff0bf34cd78d7a15d1ac30b4f4f5756"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Models/Book.cs",
+      "sha256": "cbf20ba148584fe63f4b9aa2f70d5b7434ed7d8ff8c185daa45971abf6be6ea1"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Models/LibraryMember.cs",
+      "sha256": "91b5a57bd5c73e91c21f9053dd40e1e140f04a150f0098afd53a12ab2e21862c"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Models/Loan.cs",
+      "sha256": "42314f029a49ae1e5ae687adb34a50cc0ee2a04f3979dac9157537ccc1dccc3d"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Models/Reservation.cs",
+      "sha256": "fafa5ef97e78017003d2868312a524b60b513044c51836aeb966f925c9765b56"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Practice.TUnit.Net10.Core.csproj",
+      "sha256": "64897438c3de454291f5efee56f381d62958cfcf7234eafcbdd511613af5f421"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Services/BookCatalog.cs",
+      "sha256": "7cf50511625ebe2e3ca6ff48a0f70cfabe428b9a27e54060e75cad9eb0cf2118"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Services/CatalogExportService.cs",
+      "sha256": "4ab361c805a87c0a3e487a93c17c3c3628a6be1bc1e3dc9305b4098ee2a81cf7"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Services/LibraryMemberService.cs",
+      "sha256": "4c875118f2bc8d2213a1754f0f1b6966d324736bfe24d3d1ef2967afac03d6f4"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Services/LoanService.cs",
+      "sha256": "f573506fbdea59497d861f963b89261e172270deb05fc8e2b1645ca7f40c640a"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net10.Core/Services/ReservationService.cs",
+      "sha256": "7c996e734185c6bb12972bcef1f52ac6f597be410e37af91a793dc6010284aca"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Interfaces/IBookRepository.cs",
+      "sha256": "156959732ebaea763352161a86af7e29cf11d62a2a8b5bc69dadbba7c8638e08"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Interfaces/ILoanRepository.cs",
+      "sha256": "8dd9b638e66bbeca8aa6418eb164a9412abb12ca9909893713f2b26f0989c005"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Interfaces/IMemberRepository.cs",
+      "sha256": "9cbe3ae51d89399ecdc422ebd1855d3009bbb3581c618bc4fbae49d3ed04efd0"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Interfaces/INotificationService.cs",
+      "sha256": "0266bca4ef94ad9e28ac05dd7c165933d0e38a2577e371848315b30c69385af3"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Models/Book.cs",
+      "sha256": "dc46031628fc98ebe7e7cc0d126f34ebbeb7e6b17a6b7451314b8d308d1d051a"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Models/LibraryMember.cs",
+      "sha256": "5ded6ff91369f18ce283c25dba174274f3cd4cdb57aa70f5ebba71cafd78ee6d"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Models/Loan.cs",
+      "sha256": "b1e92597f0a8df4af156318196f926af244aed2fb293713e89687766d1846bec"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Models/Reservation.cs",
+      "sha256": "4fb3392bb9f21f37f48dec0cbb4bc685e6ad4db4b727dc8f7959c910d5718b3d"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Practice.TUnit.Net8.Core.csproj",
+      "sha256": "900b601b4b27f31a0b2c7c075912a372babc47f95e01d122e724f2e9a62ec081"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Services/BookCatalog.cs",
+      "sha256": "7e4cb7e54cf3a554cdd094c5fdcc25df7c5847698b23f49e93ee7bb5b75baf54"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Services/CatalogExportService.cs",
+      "sha256": "2bcce69f27888dc432a27cf63cff8ff2a2bd4581af0a50f5ddb5e56d304ed2de"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Services/LibraryMemberService.cs",
+      "sha256": "c85f2c6e8573d3fc4678f3582e4df0b5f4fe257d2206e5afa94107bf9dfb70c7"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Services/LoanService.cs",
+      "sha256": "f44fde71a205bfb0efb758b2b5840610469505f1b22a79dea499b1511cf48415"
+    },
+    {
+      "path": "tunit/practice_tunit/src/Practice.TUnit.Net8.Core/Services/ReservationService.cs",
+      "sha256": "6cf6ab1a1220994651dc1089ee492092d37e9dd2a235929a4dd004a36dee434a"
+    },
+    {
+      "path": "tunit/practice_tunit/tests/Practice.TUnit.Core.Tests/Practice.TUnit.Core.Tests.csproj",
+      "sha256": "bbd7f06382cc2de2f36bb19e253cd7c08f5cb7674c1fb5fa68de72b5d8df2de0"
+    },
+    {
+      "path": "tunit/practice_tunit/tests/Practice.TUnit.Net10.Core.Tests/Practice.TUnit.Net10.Core.Tests.csproj",
+      "sha256": "bf58ad9eaea237d5aa70f04310332218308bd0f62e2979a0a792bd2a2db0c395"
+    },
+    {
+      "path": "tunit/practice_tunit/tests/Practice.TUnit.Net8.Core.Tests/Practice.TUnit.Net8.Core.Tests.csproj",
+      "sha256": "dfaeb9ea735c9138cf75dd6e457078f3e910bdb27bfd93e86ee5eff1096760f1"
+    },
+    {
+      "path": "unit/practice/Practice.Samples.Net10.slnx",
+      "sha256": "5b39702b510cba7d603e1e8f3f4c8cac1d82b3618bf008eaa9b88c5d9a9eebe4"
+    },
+    {
+      "path": "unit/practice/Practice.Samples.Net8.slnx",
+      "sha256": "1a6f50b82eb349fe465b1f0512789a1f9fd3063958ee53af6750a1e0a738b6e3"
+    },
+    {
+      "path": "unit/practice/Practice.Samples.slnx",
+      "sha256": "c60c3ca0d64ad0b73d59024039ea443fd0e45e603ea03b752c4f8059e8f424de"
+    },
+    {
+      "path": "unit/practice/README.md",
+      "sha256": "402e5f0f9bda2b8b9c5f5a91fc2e74c3f09b02949a3a81823cff97fdad82001c"
+    },
+    {
+      "path": "unit/practice/global.json",
+      "sha256": "1bb0e6c81768d5bc0b186bb227b263988d8ac01835d5b7d729c25d1d548df89d"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Interfaces/IEmailService.cs",
+      "sha256": "8f8599d562f7bc35df1faf31607dd11dd3b631d0ebc98c70bc6137af1e5f892a"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Interfaces/INotificationService.cs",
+      "sha256": "aa16ee759f73254c7c46305f780b13b950400bb91dbb42b8b35406ec215d9408"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Interfaces/IOrderRepository.cs",
+      "sha256": "c2be16fb26e7169f321523f940513d69305c17ddf58e6f174b3c668c39539dbb"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Interfaces/IPaymentGateway.cs",
+      "sha256": "98320f7b5a0fa5927c3d22e12255b8288d051a90de7607122af7b7e7c71ab1cf"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Interfaces/IReportWriter.cs",
+      "sha256": "ed0583203b026c6982be16039239c956181ec85c77c3b4385fb6f26fad6f4530"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Interfaces/ITransactionRepository.cs",
+      "sha256": "cd51324a565700715e85919fbb1941fd39e75579fc9509fd8d168787f9749322"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Interfaces/IUserRepository.cs",
+      "sha256": "75a3c20fa8f41c8fe03db6e0e8545ae25962ff4d7842dfe71b409aa530a5ea6e"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Interfaces/IWeatherService.cs",
+      "sha256": "2799fc66ba8851d76ba61f7a3f604cc53ebd302f62dc091684fd3fdfc47087c4"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Legacy/Database.cs",
+      "sha256": "6529f6f23bb0e2a6fa1eb888354c5b15581268afe136e6f9fe278fa7d3304398"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Legacy/LegacyReportGenerator.cs",
+      "sha256": "a764cb856aae0e4fb72b0128bf7f1cab4faf17980a427b90e30d6b34e9803071"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Models/Department.cs",
+      "sha256": "84b995f9cd407b547b42ca1a99f45ade1d3c872a4aa69ae94ff6f0176e9d9ae1"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Models/Employee.cs",
+      "sha256": "2ef0a2503f27ae851739fa6e16382f157a09a310e7bbb6f5b247b50d5df4423b"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Models/Order.cs",
+      "sha256": "8462acfc62725180741b787693d4e03b8f282da19bed0078335d9b2784936335"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Models/Subscription.cs",
+      "sha256": "c85e062dd5d2a852525e5eebb6425bf1f93ab5b0d895236f8cacf7792225281a"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Models/WeatherData.cs",
+      "sha256": "15b67b78673c825b3e59100c5b33256606eeef37d7018d1946aa616bd4b1a491"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Practice.Core.Net10.csproj",
+      "sha256": "d2c4d2b92f8471279dd2b01699125a57119ffff68b0d8a4151df618d2441a86f"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Services/ConfigurationLoader.cs",
+      "sha256": "d235b0c7e93551ec105169d7dbd145ad6957af031510c029057e16aeb030a34b"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Services/EmployeeService.cs",
+      "sha256": "dbfa997c7f87a4d296bfa46716199140d0243b4e94f864b4df12b1644d7e32a9"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Services/OrderProcessingService.cs",
+      "sha256": "3ccb1efe80ed3f0590802835f546ca2488c82ef4485334315ee8195b3c7b2875"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Services/ReportGenerator.cs",
+      "sha256": "47cc21d09be9225d84737cfff440fc1b3a652f049e08736d3642714cf4474a4d"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Services/SubscriptionService.cs",
+      "sha256": "a1fe2b823edfb93cc7cfb85ab9e8a6c9ae5ed9935e250e39d983d42a7f4c4a17"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Services/WeatherAlertService.cs",
+      "sha256": "34045329b256afb6c061f4cc1d2b8f90c108eb6f92690f3baa84f6c24a99e9f2"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/TemperatureConverter.cs",
+      "sha256": "b58d4dd82efed662ae293b53e174b68bcea258e6b225199669e8112637d6102f"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Validators/EmployeeValidator.cs",
+      "sha256": "ae6ea22841b57753f5eec9ac465ad31ce326e2c29aaa430093da9dfa17b3e4f9"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Validators/OrderItemValidator.cs",
+      "sha256": "5395376868a21129f60456da796a35331ecc17180d27a6a8b75284560da786aa"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net10/Validators/OrderValidator.cs",
+      "sha256": "e0d66447b0ffddf4318d0e3f22231ab953e56494a0e3e3e859ac2fb5a8c700f5"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Interfaces/IEmailService.cs",
+      "sha256": "3454186de0cecf111db6cfb057d9435d929e9dd2ebc203cd46223d04338c2556"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Interfaces/INotificationService.cs",
+      "sha256": "1d9a3d3d6b0cc25ac7706c16ad6ddab8c6a63df8986f2c0a3cf63ddd74126170"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Interfaces/IOrderRepository.cs",
+      "sha256": "2aa111fd91d5688f232de03d2a954ccb43889dbf41605ab2c28a2dd13a3945ea"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Interfaces/IPaymentGateway.cs",
+      "sha256": "b91ebe1e231ed79245dfbc07879f607699107deac74927e3cfa416e3bb6e57b6"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Interfaces/IReportWriter.cs",
+      "sha256": "6d0aa1c28b334540c6905e075efbc4565de0201b209df5077334e7ce351ea195"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Interfaces/ITransactionRepository.cs",
+      "sha256": "67cde5d765461908e4b0bbf5248cd8d0c7e8caeeef21e8aebc60af450f32f639"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Interfaces/IUserRepository.cs",
+      "sha256": "33f491bdfb7bfe128f0a33f82dabc33fe1e5ee9725944537cb0b95e41ca08c57"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Interfaces/IWeatherService.cs",
+      "sha256": "49a279c1828976da2efb36807669173b0b83796f4204f760fa8835b237c40a6c"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Legacy/Database.cs",
+      "sha256": "26b28f35c16b7b9d90536c23133c98e29ffc7be1e3a11472f027ae7c2c74ac01"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Legacy/LegacyReportGenerator.cs",
+      "sha256": "bb4b092f6b171ca25fe84d49d34b754bc760e69771cc7072f3dd2c230f44d867"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Models/Department.cs",
+      "sha256": "eb408de881598e9375042bb4b1263db8a6b195575cb5ceb8c5039ea021153854"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Models/Employee.cs",
+      "sha256": "030c1cf654b5dd2411350498ee52cb749afca7f7b26b126237309f94c68bbcc4"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Models/Order.cs",
+      "sha256": "e584ba0fdcdaebb76c0efa8a23b3c86378d01b03e97f5c3707cb5bee32e36cef"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Models/Subscription.cs",
+      "sha256": "1db64809cffac54c1fe54a017ed3bda9244ffc0b3a087e6e2cfef2101aa83144"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Models/WeatherData.cs",
+      "sha256": "a4a9edace06f9532d4265323711bb1b46e388cd330926c29e41ea071e5939377"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Practice.Core.Net8.csproj",
+      "sha256": "6dfb1fcb57e1d3545cb2844c6b5b8141221b6aaca5d68a531bf0bdbab22d06e4"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Services/ConfigurationLoader.cs",
+      "sha256": "766bb50fcccbe29f7265b7d8df5e3b9630f0ab6abbe433389b491b8c9a66a1aa"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Services/EmployeeService.cs",
+      "sha256": "58157a610fdf7cae8fadcb6ec51c7d639fba77203c610680e9b191043269354e"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Services/OrderProcessingService.cs",
+      "sha256": "fbeab3ed4930e34b4f620b5a9dcfdd046220c1422b0a8bff937ccd81ce54098d"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Services/ReportGenerator.cs",
+      "sha256": "d46c3dd9679c170c7820eb0c0b9199837ea919c5390f04c4851552f93db4b01f"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Services/SubscriptionService.cs",
+      "sha256": "0c64ab6731442f89d05b2670fdc1811b713f0fc957aeb51e1ca1c057dc7a7267"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Services/WeatherAlertService.cs",
+      "sha256": "48e165341619f49af43fa7da0d9b1818a7ff6bafca0caa5490960dd03906b5de"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/TemperatureConverter.cs",
+      "sha256": "f7e30099a0481f2412ce9a147ec3fa708f3173b68a5fcab00cedf7e4df0b8a2b"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Validators/EmployeeValidator.cs",
+      "sha256": "5c87f1b06cbe6db1aebb069299c980589c09fb2d095d52068f6e69e51205a01d"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Validators/OrderItemValidator.cs",
+      "sha256": "b5c58d403bb5d6e5d5830a2b95fd27e5e8bc2647fffbec66cd0ac818f5fc1006"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core.Net8/Validators/OrderValidator.cs",
+      "sha256": "0a1b1559b1f906f61bc76e7dc73565a3799f3164ed7ced5a7f7b7c7c5d1fb895"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Interfaces/IEmailService.cs",
+      "sha256": "4fe2f55ba8eab2c86766799a9ef1bb19ba7332804edb7634751688be0c92855f"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Interfaces/INotificationService.cs",
+      "sha256": "805a0cf25cc55d9d56fc97cf61b6a8882d82f17ba37df49ff9cb91d00dd92e45"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Interfaces/IOrderRepository.cs",
+      "sha256": "e969d1455101d79afdee84e60bcd6a06039bb32f1d84e15501ce8aa74f55fa5f"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Interfaces/IPaymentGateway.cs",
+      "sha256": "d0475613af41cdfb8f38a4aecaf6c73467ce8be76beb559ccbf6793cd77c7a1f"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Interfaces/IReportWriter.cs",
+      "sha256": "d53d4ef1094ed205d7b005282cc192356b3184a788f557ca1f576ee5b9df18bf"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Interfaces/ITransactionRepository.cs",
+      "sha256": "e42897165f146f25502cdddc1b0d09544d3a0e601f9fab71ae4cdc87c253f375"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Interfaces/IUserRepository.cs",
+      "sha256": "e626fdb0e5fc7017b24c06cf0d486010ff2f391e17940009905ac6e0d2513901"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Interfaces/IWeatherService.cs",
+      "sha256": "da742a495c1b9b4322aa65bc0900a2472a70c691769ba5bd2b5a9c671c5c1be5"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Legacy/Database.cs",
+      "sha256": "fffbce12b8dfca7a37639340454bbcf495710f32a8a461537a6bf1cc41566f4a"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Legacy/LegacyReportGenerator.cs",
+      "sha256": "71d2ffefed4fb11174b374d5ca00f94c525f4ec0c661c7f0174e6c3f85adfb6c"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Models/Department.cs",
+      "sha256": "31e42dfd3b1841c83acd4ddaf1017a0f64d550a9e1d893cb9f38f804544256c3"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Models/Employee.cs",
+      "sha256": "3f09712ce8d56f76d32a8ebd5b85c67abbb200ae498cf76abab29b6486715884"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Models/Order.cs",
+      "sha256": "157cda2e47e8a2441d96df39fd1ac0796d0f02f72b951e7afa0d3bb5489be733"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Models/Subscription.cs",
+      "sha256": "b12e21e247897e4a3a4e2749893753610d40df9d16a125557ca57c422af2b8e0"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Models/WeatherData.cs",
+      "sha256": "52dac981d9e3b95176a982092d84794dbb60aa594be9c2bea870d85f7e1c527e"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Practice.Core.csproj",
+      "sha256": "01480583d36ed84a3c8f244a50c577d274c577a20fd808e8b513634446a81c55"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Services/ConfigurationLoader.cs",
+      "sha256": "86d1bdffe1c829337463e643f0e0fbdb1119c2961bcd7c5843e1d7567fc9385c"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Services/EmployeeService.cs",
+      "sha256": "ce17b2195c0b129174388ed015ff0451ee2d2bfc3846dc70421177cd4c4f7c75"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Services/OrderProcessingService.cs",
+      "sha256": "9d89084b618a7b250226c5abe8521d48e2a37a0e51a474591513562c8ccd2717"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Services/ReportGenerator.cs",
+      "sha256": "a0e665afe7dae5a32827f889ee5a08129090f06f581b9c6d70bb9065a8f75904"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Services/SubscriptionService.cs",
+      "sha256": "e6eaaf37ad444e64388367826e1bdef641f830146d016fb5f8bcd703f0cbd66e"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Services/WeatherAlertService.cs",
+      "sha256": "fe9dc92c7f71575bd167f80b11522bd90f33c4d4db14ac0348fda1736e1f7aca"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/TemperatureConverter.cs",
+      "sha256": "c02f7ddb897b11a4db63369b8f9a62ac76bbc0e056de4d9acd84e628a2cca992"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Validators/EmployeeValidator.cs",
+      "sha256": "0c32f9a6cc662cbdaf610f3e9a2cdaee5bedf82758d5ab358ac9a664322513b6"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Validators/OrderItemValidator.cs",
+      "sha256": "8fb23abed529ed17a26d178284f79eec0e927b3c9cac6be45bb885b1d70c64f6"
+    },
+    {
+      "path": "unit/practice/src/Practice.Core/Validators/OrderValidator.cs",
+      "sha256": "2b3948d7f8760e8968a359cf9edecc8a0d649d999678d9acb95003607ba710b7"
+    },
+    {
+      "path": "unit/practice/tests/Practice.Core.Net10.Tests/Practice.Core.Net10.Tests.csproj",
+      "sha256": "7828bbd2e5693bf4ad3f8a93da72a9b80223d6703bce6998e849eb452ab6323c"
+    },
+    {
+      "path": "unit/practice/tests/Practice.Core.Net8.Tests/Practice.Core.Net8.Tests.csproj",
+      "sha256": "11a50584efcf3bddcaff902c4440eda1135294f09208c9c3079b53f4abb3d555"
+    },
+    {
+      "path": "unit/practice/tests/Practice.Core.Tests/Practice.Core.Tests.csproj",
+      "sha256": "901aa6e6042582c42edece0b5028f9cc40c1b3509ac01b6db4be09026d19ef2e"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/Practice.TUnit.Net8.Core/Practice.TUnit.Net8.Core.csproj" />
+  <Project Path="tests/Practice.TUnit.Net8.Core.Tests/Practice.TUnit.Net8.Core.Tests.csproj" />
+  <Project Path="src/Practice.TUnit.Net10.Core/Practice.TUnit.Net10.Core.csproj" />
+  <Project Path="tests/Practice.TUnit.Net10.Core.Tests/Practice.TUnit.Net10.Core.Tests.csproj" />
+</Solution>

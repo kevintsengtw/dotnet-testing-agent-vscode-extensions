@@ -26,6 +26,23 @@
 
 四模式內建離線版本沿用 v0.8.3，保留 Code Coverage 與預設提示詞功能。2026-10-16 使用者確認 macOS R2 可保留既有 Full、安裝 Lite，安裝後診斷畫面正常。Windows 11 已透過實際 VS Code 面板完成四模式乾淨安裝、環境診斷及既有 Full 工作區加裝 Lite，既有檔案保持不變。共存後 Full 僅有既有用量統計範圍提醒，其餘三模式正常；驗證範圍不包含 .NET 測試工作流程執行。
 
+## 範例專案與操作指南
+
+範例用來讓你實際操作工具包：在 VS Code 安裝所選模式的 Skills／Agents 與相關檔案，從「預設提示詞」複製範本，貼到 Claude Code／Codex 擴充套件的對話框，修改測試目標與情境後送出。AI coding agent 會依工作流程產生、執行與審查測試，你可在對話查看進度與結果。工作區與面板操作見[工作區準備與工具設定](samples/guides/getting-started.md)；Unit 依 [Unit：選擇操作範圍](samples/unit/practice/README.md#選擇操作範圍)選擇情境。
+
+請透過[公開儲存庫](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions)的 **Code → Download ZIP** 或 Git clone 取得整份 samples/；範例與指南不包含在 VSIX 中。其他練習見[在 VS Code 操作測試工作流程](samples/README.md)。
+
+| 練習 | 操作入口 | 適用條件 |
+| --- | --- | --- |
+| Unit | [Unit：指定方法、單一類別與多類別範圍](samples/unit/practice/README.md) | Claude／Codex Full 或 Lite；多類別使用 Full |
+| Integration | [Integration：API 操作、單一 Controller 與多個目標](samples/integration/practice_integration/README.md) | Full、Linux containers |
+| Aspire | [Aspire：指定端點、預約流程與跨服務檢查](samples/aspire/practice_aspire/README.md) | Full、Linux containers |
+| TUnit | [TUnit：指定方法、整個類別與 xUnit 移轉](samples/tunit/practice_tunit/README.md) | Full |
+| MTP 原生 Coverage | [MTP 原生 Code Coverage：Step by Step](samples/coverage-mtp-native/README.md) | 不需 AI 模式；另需覆蓋率工具 |
+| MTP 舊版相容 Coverage | [MTP 舊版相容 Code Coverage：Step by Step](samples/coverage-mtp-legacy/README.md) | 不需 AI 模式；另需覆蓋率工具 |
+
+Unit、Integration、Aspire、TUnit 都各有 .NET 8／9／10 三種情境；Unit 示範方法、單一類別與多類別，其他流程依上表指南分別操作。依情境選擇 AI 工具與模式，再依[套用到自己的專案](samples/guides/apply-to-your-project.md)替換提示詞欄位。容器及 Coverage 的 SDK、runtime 與工具需求另列於對應指南。
+
 ## v0.8.3：Code Coverage 與預設提示詞
 
 新增獨立、預設收合的「Code Coverage」區塊，不需先初始化工作流程模式。掃描 `.sln`／`.slnx` 的實際測試專案成員，依 VSTest 或 MTP 原生／舊版相容模式產生 Coverage 與 HTML Report 指令，提供分別複製與成功回饋。
