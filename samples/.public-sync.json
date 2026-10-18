@@ -27,7 +27,7 @@
     },
     {
       "path": "aspire/practice_aspire/README.md",
-      "sha256": "8f1baab6857a2452ff81dcc06fd59825a8fb11cee47a35d8c15826466c3bd46d"
+      "sha256": "f5f818ed8132f1487aec358f77e23a682bdf0e06a1ebba865104a6c4c44b1626"
     },
     {
       "path": "aspire/practice_aspire/global.json",
@@ -35,7 +35,7 @@
     },
     {
       "path": "aspire/practice_aspire/src/Practice.Aspire.AppHost/Practice.Aspire.AppHost.csproj",
-      "sha256": "3819f145ae36337a9d5781510a55b96537472896b09d72447e7bfd34687c4da0"
+      "sha256": "aa4273056fe7715d21844bb4816a1b8bad0bc28d0631f807fc199206cd5db942"
     },
     {
       "path": "aspire/practice_aspire/src/Practice.Aspire.AppHost/Program.cs",
@@ -527,7 +527,7 @@
     },
     {
       "path": "integration/practice_integration/README.md",
-      "sha256": "d781c0c07fba7e2aa954e8e83e500fb842cf1814f3c9a9c30f0505ed35cc96f0"
+      "sha256": "5499977b0c507d63bda418d4190d2323428332e7475b4ae0382ff8750876aae3"
     },
     {
       "path": "integration/practice_integration/global.json",
@@ -735,7 +735,7 @@
     },
     {
       "path": "integration/practice_integration/src/Practice.Integration.WebApi/Practice.Integration.WebApi.csproj",
-      "sha256": "cb12493e0a0fd3247df2ff3d13d449a95999f92c1232047656507b600f28c763"
+      "sha256": "1c135b99779c73d7cd5a9e4e1e52bf361405ce4165ec9258d5110397014a0705"
     },
     {
       "path": "integration/practice_integration/src/Practice.Integration.WebApi/Program.cs",
@@ -1003,7 +1003,7 @@
     },
     {
       "path": "unit/practice/README.md",
-      "sha256": "402e5f0f9bda2b8b9c5f5a91fc2e74c3f09b02949a3a81823cff97fdad82001c"
+      "sha256": "be3d6eb5ad2c24b654c9aec8405b99550886c217943dae60a9f26d98f947665a"
     },
     {
       "path": "unit/practice/global.json",
@@ -1331,7 +1331,7 @@
     },
     {
       "path": "unit/practice/tests/Practice.Core.Tests/Practice.Core.Tests.csproj",
-      "sha256": "901aa6e6042582c42edece0b5028f9cc40c1b3509ac01b6db4be09026d19ef2e"
+      "sha256": "45f9d527e18f34a729062586bd49e5a33aa1054cf982fa42277f5e950a510d8c"
     }
   ]
 }

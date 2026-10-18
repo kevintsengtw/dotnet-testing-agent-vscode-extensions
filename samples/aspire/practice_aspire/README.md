@@ -181,9 +181,9 @@
 | EF Core SqlServer | 8.0.11 | 9.0.4 | 10.0.3 |
 | FluentValidation／Redis／Swashbuckle | 11.11.0／2.8.41／7.2.0 | 相同 | 相同 |
 | Test SDK／xunit／runner／coverlet | 17.12.0／2.9.2／2.8.2／6.0.2 | 相同 | 相同 |
-| 先前限定修補的直接參照 | AppHost：KubernetesClient 17.0.14 | 無新增 | AppHost：MessagePack 2.5.307、Pkcs 9.0.21；WebApi：Pkcs 9.0.21 |
+| 限定修補的直接參照 | AppHost：KubernetesClient 17.0.14 | AppHost：KubernetesClient 17.0.14 | AppHost：MessagePack 2.5.307、Pkcs 9.0.21；WebApi：Pkcs 9.0.21 |
 
-三版測試骨架尚未加入 Aspire.Hosting.Testing，由工作流程按 Hosting 版本補齊；不要把 13.x 的 fixture API 整套貼到 8.2.2 或 9.0.0。.NET 8 的 AppHost SDK／Hosting 不同版是原有設定。.NET 9 保留來源套件，這次沒有執行還原、建置、audit 或容器測試。
+三版測試骨架尚未加入 Aspire.Hosting.Testing，由工作流程按 Hosting 版本補齊；不要把 13.x 的 fixture API 整套貼到 8.2.2 或 9.0.0。.NET 8 的 AppHost SDK／Hosting 不同版是原有設定。原始新增 .NET 9 時保留來源套件，未執行還原、建置、audit 或容器測試；2026-10-18 僅在該版 AppHost 明確參考 KubernetesClient 17.0.14，維持 AppHost SDK／Hosting 9.0.0，傳遞解析 Fractions 7.3.0、YamlDotNet 16.3.0。該版 AppHost、WebApi 與測試骨架在隔離副本完成公開還原、完整相依與弱點檢查，未回報已知弱點，Release 建置為 0 個警告、0 個錯誤。本輪未啟動 AppHost、容器或執行測試／AI 流程，沒有建立執行期相容性的驗證結果，待測程式不變。
 
 三版正式 AppHost 均移除來源的兩個固定具名 SQL／Redis 資料磁碟區，避免不同副本共用舊資料；服務名稱與待測 API 不變，沒有加入持續容器生命週期。本次新增 .NET 9 只做同樣的兩處移除，來源及快照保留。
 

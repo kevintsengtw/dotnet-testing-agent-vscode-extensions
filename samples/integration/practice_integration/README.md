@@ -173,12 +173,12 @@
 | 套件 | .NET 8 | .NET 9 | .NET 10 |
 | --- | --- | --- | --- |
 | Npgsql.EntityFrameworkCore.PostgreSQL | 8.0.11 | 9.0.4 | 10.0.0 |
-| MongoDB.Driver | 3.12.0 | 3.1.0 | 3.12.0 |
+| MongoDB.Driver | 3.12.0 | 3.12.0 | 3.12.0 |
 | FluentValidation.DependencyInjectionExtensions | 11.11.0 | 11.11.0 | 11.11.0 |
 | StackExchange.Redis／Swashbuckle | 2.8.41／7.2.0 | 相同 | 相同 |
 | Test SDK／xunit／runner／coverlet | 17.12.0／2.9.2／2.8.2／6.0.2 | 相同 | 相同 |
 
-骨架沒有預先加入 MVC Testing 或 Testcontainers；由工作流程按本輪情境在測試端補齊。MVC Testing 須配合目標框架，不將 .NET 10 的套件整套搬到 .NET 8／9。新增 .NET 9 沿用來源套件，並沒有同步套用其他版本的升級；本次未還原、建置或查詢其弱點。
+骨架沒有預先加入 MVC Testing 或 Testcontainers；由工作流程按本輪情境在測試端補齊。MVC Testing 須配合目標框架，不將 .NET 10 的套件整套搬到 .NET 8／9。原始新增 .NET 9 時沿用來源套件，未還原、建置或查詢其弱點；2026-10-18 僅將該版 MongoDB.Driver 更新為 3.12.0，傳遞解析 SharpCompress 0.48.1、Snappier 1.3.1。該版 WebApi 與測試骨架在隔離副本完成公開還原、完整相依及弱點檢查，未回報已知弱點；Release 建置為 0 個警告、0 個錯誤。這次未執行容器、測試或 AI 流程，待測程式不變。
 
 ### 測試工具的 SSH.NET 相依修補
 

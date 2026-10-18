@@ -18,6 +18,7 @@
     <PackageReference Include="Aspire.Hosting.Redis" Version="9.0.0" />
     <!-- SQL Server 容器支援 -->
     <PackageReference Include="Aspire.Hosting.SqlServer" Version="9.0.0" />
+    <PackageReference Include="KubernetesClient" Version="17.0.14" />
   </ItemGroup>
 
   <!-- 引用要編排的專案 -->
