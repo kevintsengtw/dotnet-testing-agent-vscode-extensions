@@ -12,9 +12,17 @@
 - **Codex Agent 設定**：可針對單一 Agent 調整模型與推理強度；Full 與 Lite 的設定各自保留。
 - **工作區檔案保護**：保留使用者自訂檔案與既有設定，部署失敗時復原原有內容。
 
-## 最新版本：v0.8.4
+## 最新版本：v0.8.5
 
-下載 [v0.8.4 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.4) 中的 `dotnet-testing-agent-0.8.4.vsix`。完整步驟請見 [v0.8.4 安裝與升級指南](docs/v0.8.4.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
+下載 [v0.8.5 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.5) 中的 `dotnet-testing-agent-0.8.5.vsix`。完整步驟請見 [v0.8.5 安裝與升級指南](docs/v0.8.5.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
+
+## v0.8.5：交易回復警告與人工處理指引
+
+- 部署或 Codex Agent 設定失敗後，輸出會逐筆列出交易回復警告碼與路徑；原檔已復原但仍有 discard 或備份時，通知會提示人工檢查。
+- 環境診斷與本文的六步指引說明如何核對交易歸屬、確認檔案復原、依序處理 discard 與備份，再重新診斷。交易與清理邏輯不變，未新增自動清理功能。
+- 沿用已合併的 Node.js 20 工具鏈、CI、封裝及公開同步維護。六套 Samples 與指南已獨立公開，維持 git／ZIP 提供，不包入 VSIX。
+
+四模式內建離線來源沿用 v0.8.4；Claude Lite 共存修正已包含於 v0.8.4，不列為本版的新修正。
 
 ## v0.8.4：既有 Skill 共存與衝突提示
 
@@ -153,7 +161,9 @@ Codex Full 的 16 個 Agents 依 Unit、Integration、Aspire、TUnit 排列；Co
 
 ## 使用方式
 
-1. 安裝提供的 `dotnet-testing-agent-0.8.3.vsix`，完整重啟 VS Code。
+請先從上方 v0.8.5 Release 下載 `dotnet-testing-agent-0.8.5.vsix`。
+
+1. 安裝提供的 `dotnet-testing-agent-0.8.5.vsix`，完整重啟 VS Code。
 2. 開啟目標 workspace，從工具包側邊欄展開 Claude 或 Codex。
 3. 選擇 Full 或 Lite 並安裝需要的模式；四個模式可同時存在。
 4. 執行環境診斷。
