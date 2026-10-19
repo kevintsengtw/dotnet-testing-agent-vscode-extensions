@@ -132,6 +132,25 @@ Codex Full 的 16 個 Agents 依 Unit、Integration、Aspire、TUnit 排列；Co
 
 安裝與更新會固定 stable Release tag 和 exact commit，再以同一來源計畫完成驗證與原子交易。網路不可用時，乾淨工作區仍可使用完整 bundled snapshot。未知的使用者檔案、Claude 既有設定與 Codex 既有設定值都會保留；衝突或無效設定會停止操作，不會被覆寫。
 
+## 交易回復後的殘留檔案
+
+環境診斷若列出 `TRANSACTION_RECOVERY_REQUIRED` 或 `TRANSACTION_DISCARD_CLEANUP_REQUIRED`，表示仍有該工作區的交易資料需要人工檢查。這些是提醒，不能只憑警告碼判定原檔已復原或資料可刪除；環境診斷不會自動清理。
+
+| 項目 | 位置與用途 |
+| --- | --- |
+| 交易備份目錄 | 位於工作區的上一層，名稱形如 `.dta-workflow-backup-<識別碼>`，包含 `transaction.json`，也可能保留尚需復原的檔案。 |
+| discard | 位於原 target 旁，名稱形如 `<原檔名>.dta-discard-<識別碼>`。回復時會先將當時的 target 移到此處，再將原檔放回；因此 discard 可能含失敗操作寫入的內容。 |
+
+人工處理順序：
+
+1. 暫停該工作區的安裝、更新、修復及 Agent 設定操作，保留環境診斷報告；若操作失敗，也保留「輸出 → dotnet-testing-agent」中可取得的結果與路徑。
+2. 先將目前檔案、指定的 discard 及備份目錄另存於需留存的位置。開啟該備份目錄的 `transaction.json`，核對 `workspaceRoot` 是否為本工作區，並逐一確認 entries 的 `relativePath`、`backup`、`discard` 與實際檔案。不要修改 journal 來消除警告，也不要只因 state 顯示 `rolled-back` 或檔案存在就認定已復原。
+3. 依操作前的備份、版本控制與實際內容，確認所有受影響檔案已正確復原，或原本不存在的項目已回復為不存在，且不再需要交易中的復原資料。仍有失敗、檔案缺漏、內容不符、journal 無法解讀或歸屬不明時，保留全部資料並停止處理。
+4. 確認後，先保留 discard 中需要的內容，再人工移除已核對為該筆交易的 discard；若它已不存在，繼續核對對應備份目錄。只處理核對過的精確路徑，不依名稱批次刪除。
+5. 確認該筆交易的 discard 已處理，且不再需要復原資料後，才人工移除對應的整個備份目錄（含 `transaction.json`）。只移除 discard 仍可能留下備份提醒；先刪備份則可能讓診斷失去尋找 discard 的紀錄，不能用來略過檢查。
+6. 重新執行環境診斷，確認這筆交易的提醒已消失。若仍有提醒，依報告列出的其他路徑逐筆檢查，不要將其他交易或使用者檔案一併清理。
+
+
 ## 使用方式
 
 1. 安裝提供的 `dotnet-testing-agent-0.8.3.vsix`，完整重啟 VS Code。
