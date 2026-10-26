@@ -16,6 +16,8 @@
 
 下載 [v0.8.5 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.5) 中的 `dotnet-testing-agent-0.8.5.vsix`。完整步驟請見 [v0.8.5 安裝與升級指南](docs/v0.8.5.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
 
+開發中來源已同步 Codex Lite v1.2.3，固定 commit `a39f35ee9b1a6b836d65d927592113772af44654`；Codex Full 維持 v1.3.1，Claude Full v1.7.3、Claude Lite v1.2.0 與 Shared Skills v2.4.5 不變。此更新尚未發布，下方版本說明與 v0.8.5 下載仍對應既有發行內容。
+
 ## v0.8.5：交易回復警告與人工處理指引
 
 - 部署或 Codex Agent 設定失敗後，輸出會逐筆列出交易回復警告碼與路徑；原檔已復原但仍有 discard 或備份時，通知會提示人工檢查。
@@ -71,14 +73,14 @@ Codex Full 的 Agents 區塊依序為 Unit、Integration、Aspire、TUnit；Full
 
 v0.8.2 修正舊版移轉工作區解除安裝 Full 模式後，中央部署 manifest 被誤判為無效、無法重新安裝的問題。歷史移轉紀錄不再被當成目前已安裝模式；其他模式的檔案與使用者自訂內容仍受保護。已受影響的 manifest 可直接讀取，不需要手動刪除或修改。
 
-## 內建離線版本
+## 開發中內建離線版本（尚未發布）
 
 | 內容 | 內建版本 |
 | --- | --- |
 | Claude Full | `v1.7.3` |
 | Claude Lite | `v1.2.0` |
 | Codex Full | `v1.3.1` |
-| Codex Lite | `v1.2.2` |
+| Codex Lite | `v1.2.3` |
 | Shared Skills | `v2.4.5` |
 | unit-test-scenarios | `d0050198` 精確 commit |
 
