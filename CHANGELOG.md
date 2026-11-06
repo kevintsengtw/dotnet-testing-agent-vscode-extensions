@@ -1,8 +1,12 @@
 # Changelog
 
-## [Unreleased]
+## [0.8.6] - 2026-11-06
 
-- Codex Lite 來源與內建離線快照同步至 v1.2.3，固定 commit `a39f35ee9b1a6b836d65d927592113772af44654`；保留上游 Skill 名稱、部署結構與 v1.2.2 升級來源。Codex Full 維持 v1.3.1，其他來源版本不變。本項尚未發布。
+- Codex Lite 來源與內建離線快照同步至 v1.2.4，固定 commit `e720870d88cd559c1c5b0eb66946ddde5ee3ad26`，包含交接、情境報告、NuGet 診斷與 `gpt-6.1-terra` credit 試算。
+- Codex Full／Lite 的 Agent 模型選單新增 `gpt-6.1-terra`；前三項為 `gpt-6-astra`、`gpt-6.1-sol`、`gpt-6.1-terra`，沒有已保存選擇時預設為 `gpt-6.1-sol`，明確保存的選擇維持原值。上游 Agent 來源預設不變。
+- 修正交易回復、部署前置檢查與診斷；重用交易紀錄中的固定 discard 相對路徑，減少重複計算，保留回復檢查與使用者檔案保護。
+- 納入 fast-uri 3.1.9 與 serialize-javascript 7.1.4 相依修補。
+- Codex Full 維持 v1.3.1，本版不包含 v1.3.2；Claude Full v1.7.3、Claude Lite v1.2.0、Shared Skills v2.4.5 與歷史來源固定值不變。
 
 ## [0.8.5] - 2026-10-19
 

@@ -12,11 +12,19 @@
 - **Codex Agent 設定**：可針對單一 Agent 調整模型與推理強度；Full 與 Lite 的設定各自保留。
 - **工作區檔案保護**：保留使用者自訂檔案與既有設定，部署失敗時復原原有內容。
 
-## 最新版本：v0.8.5
+## 最新版本：v0.8.6
 
-下載 [v0.8.5 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.5) 中的 `dotnet-testing-agent-0.8.5.vsix`。完整步驟請見 [v0.8.5 安裝與升級指南](docs/v0.8.5.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
+下載 [v0.8.6 Release](https://github.com/kevintsengtw/dotnet-testing-agent-vscode-extensions/releases/tag/v0.8.6) 中的 `dotnet-testing-agent-0.8.6.vsix`。完整步驟請見 [v0.8.6 安裝與升級指南](docs/v0.8.6.md)，變更紀錄請見 [CHANGELOG](CHANGELOG.md)。
 
-開發中來源已同步 Codex Lite v1.2.3，固定 commit `a39f35ee9b1a6b836d65d927592113772af44654`；Codex Full 維持 v1.3.1，Claude Full v1.7.3、Claude Lite v1.2.0 與 Shared Skills v2.4.5 不變。此更新尚未發布，下方版本說明與 v0.8.5 下載仍對應既有發行內容。
+## v0.8.6：Lite 更新、模型選單與部署修正
+
+- Codex Lite 來源與內建離線快照同步至 v1.2.4，固定 commit `e720870d88cd559c1c5b0eb66946ddde5ee3ad26`，包含交接、情境報告、NuGet 診斷與 `gpt-6.1-terra` credit 試算。
+- Codex Full／Lite 的 Agent 模型選單新增 `gpt-6.1-terra`；前三項為 `gpt-6-astra`、`gpt-6.1-sol`、`gpt-6.1-terra`，沒有已保存選擇時預設為 `gpt-6.1-sol`，明確保存的選擇維持原值。上游 Agent 來源預設不變。
+- 修正交易回復、部署前置檢查與診斷；重用交易紀錄中的固定 discard 相對路徑，減少重複計算，保留回復檢查與使用者檔案保護。
+- 納入 fast-uri 3.1.9 與 serialize-javascript 7.1.4 相依修補。
+- Codex Full 維持 v1.3.1，本版不包含 v1.3.2；Claude Full v1.7.3、Claude Lite v1.2.0、Shared Skills v2.4.5 與歷史來源固定值不變。
+
+安裝與升級步驟見 [v0.8.6 安裝指南](docs/v0.8.6.md)。Extension 更新與工作區模式更新分開管理；保留既有模式，先診斷再按需要更新。
 
 ## v0.8.5：交易回復警告與人工處理指引
 
@@ -80,7 +88,7 @@ v0.8.2 修正舊版移轉工作區解除安裝 Full 模式後，中央部署 man
 | Claude Full | `v1.7.3` |
 | Claude Lite | `v1.2.0` |
 | Codex Full | `v1.3.1` |
-| Codex Lite | `v1.2.3` |
+| Codex Lite | `v1.2.4` |
 | Shared Skills | `v2.4.5` |
 | unit-test-scenarios | `d0050198` 精確 commit |
 
@@ -163,9 +171,9 @@ Codex Full 的 16 個 Agents 依 Unit、Integration、Aspire、TUnit 排列；Co
 
 ## 使用方式
 
-請先從上方 v0.8.5 Release 下載 `dotnet-testing-agent-0.8.5.vsix`。
+請先從上方 v0.8.6 Release 下載 `dotnet-testing-agent-0.8.6.vsix`。
 
-1. 安裝提供的 `dotnet-testing-agent-0.8.5.vsix`，完整重啟 VS Code。
+1. 安裝提供的 `dotnet-testing-agent-0.8.6.vsix`，完整重啟 VS Code。
 2. 開啟目標 workspace，從工具包側邊欄展開 Claude 或 Codex。
 3. 選擇 Full 或 Lite 並安裝需要的模式；四個模式可同時存在。
 4. 執行環境診斷。
